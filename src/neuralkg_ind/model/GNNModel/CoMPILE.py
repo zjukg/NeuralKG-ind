@@ -190,12 +190,12 @@ class CoMPILE(nn.Module):
         node_feat = torch.cat(node_feat, dim=0)
 
         edge_feat = torch.cat(edge_feat, dim=0)
-        graph_embed, source_embed, target_embed = self.gnn(node_feat, edge_feat, e2n_sp, e2n_sp2, graph_sizes, 
+        graph_embed, source_embed, target_embed = self.CoMPILEConv(node_feat, edge_feat, e2n_sp, e2n_sp2, graph_sizes, 
         total_target_relation, total_source, total_target, source_node, target_node, list(list_num_edges))
 
         return graph_embed, source_embed, target_embed
 
-    def gnn(self, node_feat, edge_feat, e2n_sp, e2n_sp2, graph_sizes, target_relation, total_source, total_target, source_node, target_node, edge_sizes = None, node_degs=None):
+    def CoMPILEConv(self, node_feat, edge_feat, e2n_sp, e2n_sp2, graph_sizes, target_relation, total_source, total_target, source_node, target_node, edge_sizes = None, node_degs=None):
         """calculating graph embedding, source embedding and target embedding.
 
         Args:

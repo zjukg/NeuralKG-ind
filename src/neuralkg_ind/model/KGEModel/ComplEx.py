@@ -69,6 +69,50 @@ class ComplEx(Model):
             -1
         )
         
+    def score_embedding(self, head_emb, relation_emb, tail_emb):
+        """Calculating the triple embedding.
+
+        The formula for calculating the score is :math:`\operatorname{Re}\left(h^{\top} \operatorname{diag}(r) \overline{t}\right)`
+
+        Args:
+            head_emb: The head entity embedding.
+            relation_emb: The relation embedding.
+            tail_emb: The tail entity embedding.
+
+        Returns:
+            embedding: The embedding of triple.
+        """
+        re_head, im_head = torch.chunk(head_emb, 2, dim=-1)
+        re_relation, im_relation = torch.chunk(relation_emb, 2, dim=-1)
+        re_tail, im_tail = torch.chunk(tail_emb, 2, dim=-1)
+
+        embedding = re_head * re_tail * re_relation \
+                  + im_head * im_tail * re_relation \
+                  + re_head * im_tail * im_relation \
+                  - im_head * re_tail * im_relation
+        return embedding
+        
+
+    def mapping_embedding(self, head_emb, relation_emb):
+        """Calculating the head and relation mapping embedding.
+
+        The formula for calculating the score is :math:`\operatorname{Re}\left(h^{\top} \operatorname{diag}(r))`
+
+        Args:
+            head_emb: The head entity embedding.
+            relation_emb: The relation embedding.
+
+        Returns:
+            embedding: The embedding of mapping.
+        """
+        re_head, im_head = torch.chunk(head_emb, 2, dim=-1)
+        re_relation, im_relation = torch.chunk(relation_emb, 2, dim=-1)
+
+        embedding = re_head * re_relation \
+                  + im_head * re_relation \
+                  + re_head * im_relation \
+                  - im_head * im_relation
+        return embedding
 
     def forward(self, triples, negs=None, mode='single'):
         """The functions used in the training phase

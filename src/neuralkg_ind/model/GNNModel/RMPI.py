@@ -42,7 +42,7 @@ class RMPI(nn.Module):
         self.leakyrelu = nn.LeakyReLU(0.2)
         self.drop = torch.nn.Dropout(self.args.edge_dropout)
 
-    def rel_aggr(self, graph, u_node, v_node, num_nodes, num_edges, aggr_flag, is_drop):
+    def AggregateConv(self, graph, u_node, v_node, num_nodes, num_edges, aggr_flag, is_drop):
         """Function of aggregating relation.
 
         Args:
@@ -214,7 +214,7 @@ class RMPI(nn.Module):
         self.neighbor_edges2rels = neighbor_edges2rels
 
         self.h0_extracted = self.h0[neighbor_edges]
-        h_0_N = self.rel_aggr(en_g, neighbor_u_nodes, neighbor_v_nodes, num_nodes, num_edges, aggr_flag=2, is_drop=True)
+        h_0_N = self.AggregateConv(en_g, neighbor_u_nodes, neighbor_v_nodes, num_nodes, num_edges, aggr_flag=2, is_drop=True)
         h_0_N = F.relu(h_0_N)
         self.h1 = self.rel_emb(en_g.edata['type'])
 
@@ -226,7 +226,7 @@ class RMPI(nn.Module):
         self.h1_extracted = self.h1[rel_edge_ids]
         self.rel_edge_ids = rel_edge_ids
         self.rel_edge_ids = rel_edge_ids
-        h_1_N = self.rel_aggr(en_g, head_node, tail_node, num_nodes, num_edges, aggr_flag=1, is_drop=True)
+        h_1_N = self.AggregateConv(en_g, head_node, tail_node, num_nodes, num_edges, aggr_flag=1, is_drop=True)
 
         h_1_N = F.relu(h_1_N)
         h2 = self.h1_extracted+h_1_N
@@ -240,7 +240,7 @@ class RMPI(nn.Module):
 
             dis_num_nodes = dis_g.number_of_nodes()
             dis_num_edges = dis_g.number_of_edges()
-            one_hop_nei_embd = self.rel_aggr(dis_g, dis_head_ids, dis_tail_ids, dis_num_nodes, dis_num_edges,
+            one_hop_nei_embd = self.AggregateConv(dis_g, dis_head_ids, dis_tail_ids, dis_num_nodes, dis_num_edges,
                                              aggr_flag=0, is_drop=True)
             one_hop_nei_embd = F.relu(one_hop_nei_embd)
             if self.args.conc:

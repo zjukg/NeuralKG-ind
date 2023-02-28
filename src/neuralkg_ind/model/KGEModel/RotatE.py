@@ -84,6 +84,60 @@ class RotatE(Model):
         score = self.margin.item() - score.sum(dim = -1)
         return score
 
+    def score_embedding(self, head_emb, relation_emb, tail_emb):
+        """Calculating the triple embedding.
+
+        The formula for calculating the triple embedding is :math:`\|h \circ r - t\|`
+
+        Args:
+            head_emb: The head entity embedding.
+            relation_emb: The relation embedding.
+            tail_emb: The tail entity embedding.
+
+        Returns:
+            embedding: The embedding of triple.
+        """
+        pi = 3.14159265358979323846
+        re_head, im_head = torch.chunk(head_emb, 2, dim=-1)
+        re_tail, im_tail = torch.chunk(tail_emb, 2, dim=-1)
+        phase_relation = relation_emb/(self.embedding_range.item()/pi)
+
+        re_relation = torch.cos(phase_relation)
+        im_relation = torch.sin(phase_relation)
+
+        re_score = re_head * re_relation - im_head * im_relation
+        im_score = re_head * im_relation + im_head * re_relation
+        re_score = re_score - re_tail
+        im_score = im_score - im_tail
+
+        embedding = torch.stack([re_score, im_score], dim = 0)
+        return embedding
+
+    def mapping_embedding(self, head_emb, relation_emb):
+        """Calculating the head and relation mapping embedding.
+
+        The formula for calculating the mapping embedding is :math:`h \circ r`
+
+        Args:
+            head_emb: The head entity embedding.
+            relation_emb: The relation embedding.
+
+        Returns:
+            embedding: The embedding of mapping.
+        """
+        pi = 3.14159265358979323846
+        re_head, im_head = torch.chunk(head_emb, 2, dim=-1)
+        phase_relation = relation_emb/(self.embedding_range.item()/pi)
+
+        re_relation = torch.cos(phase_relation)
+        im_relation = torch.sin(phase_relation)
+
+        re_score = re_head * re_relation - im_head * im_relation
+        im_score = re_head * im_relation + im_head * re_relation
+
+        embedding = torch.stack([re_score, im_score], dim = 0)
+        return embedding
+    
     def forward(self, triples, negs=None, mode='single'):
         """The functions used in the training phase
 
