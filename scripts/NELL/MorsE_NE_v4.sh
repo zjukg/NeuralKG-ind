@@ -26,6 +26,7 @@ EARLY_STOP_PATIENCE=1000
 NUM_WORKERS=20
 DROPOUT=0
 CALC_HITS=1,5,10
+KGE_MODEL=RotatE
 GPU=3
 
 CUDA_VISIBLE_DEVICES=$GPU python -u main.py \
@@ -55,5 +56,6 @@ CUDA_VISIBLE_DEVICES=$GPU python -u main.py \
     --num_workers $NUM_WORKERS \
     --dropout $DROPOUT \
     --calc_hits $CALC_HITS \
+    --kge_model $KGE_MODEL \
     --inductive \
 
