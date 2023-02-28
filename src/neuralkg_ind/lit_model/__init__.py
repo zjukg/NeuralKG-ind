@@ -9,6 +9,7 @@ from .CrossELitModel import CrossELitModel
 from .XTransELitModel import XTransELitModel
 from .IterELitModel import IterELitModel
 from .RugELitModel import RugELitModel
+from .SEGNNLitModel import SEGNNLitModel
 
 from .indGNNLitModel import indGNNLitModel
 from .SNRILitModel import SNRILitModel

@@ -80,8 +80,29 @@ def setup_parser():
     parser.add_argument('--hid_drop', default=0.3, type=float, help='only on ConvE,Dropout for the hidden layer')
     parser.add_argument('--fet_drop', default=0.2, type=float, help='only on ConvE,Dropout for the convolutional features')
     parser.add_argument('--hid_size', default=9728, type=int, help='only on ConvE,The side of the hidden layer. The required size changes with the size of the embeddings.')
+    parser.add_argument('--hid_size_component', default=3648, type=int, help='only on ConvE,The side of the hidden layer. The required size changes with the size of the embeddings.')
     parser.add_argument('--smoothing', default=0.1, type=float, help='only on ConvE,Make the label smooth')
-        
+    parser.add_argument("--out_channel", default=32, type=int, help="only on ConvE")    
+    parser.add_argument("--ker_sz", default=3, type=int, help="only on ConvE")
+    parser.add_argument("--k_h", default=10, type=int, help="only on ConvE")
+    parser.add_argument("--k_w", default=20, type=int, help="only on ConvE")
+    parser.add_argument("--fc_bias", default=True, action='store_false', help="only on ConvE, the bias of fc in ConvE layer")
+
+    #parser only for SEGNN #TODO: short parser
+    parser.add_argument("--kg_layer", default=1, type=int, help="only on SEGNN")
+    parser.add_argument("--rm_rate", default=0.5, type=float, help= "only on SEGNN")
+    parser.add_argument("--ent_drop", default=0.2, type=float, help="only on SEGNN")
+    parser.add_argument("--rel_drop", default=0, type=float, help="only on SEGNN")
+    parser.add_argument("--ent_drop_pred", default=0.3, type=float, help="only on ConvE")
+    parser.add_argument("--fc_drop", default = 0.1, type=float, help = "only on SEGNN")
+    parser.add_argument("--comp_op", default='mul', type=str, help="only on SEGNN")
+    parser.add_argument("--bn", default=False, action='store_true')
+    parser.add_argument("--warmup_epoch", default=5, type=int, help="only on SEGNN")
+    parser.add_argument("--warm_up_steps", default=None, type=int, help="only on SEGNN")
+    parser.add_argument("--maxsteps", default=None, type=int, help="only on SEGNN")
+    parser.add_argument("--pred_rel_w", default=False, action="store_true", help="only on SEGNN")   
+    parser.add_argument("--label_smooth", default=0.1, type=float, help="only on SEGNN")
+ 
     # parser only for IterE
     parser.add_argument("--max_entialments", default=2000, type=int, help="in IterE.py")
     parser.add_argument("--axiom_types", default=10, type=int, help="in IterE.py")

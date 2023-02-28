@@ -28,6 +28,12 @@ class KGDataModule(BaseDataModule):
         self.valid_sampler = valid_sampler
         self.test_sampler = test_sampler
 
+        #TODO:SEGNN
+        if self.args.model_name == 'SEGNN':
+            self.data_train = self.train_sampler.get_train()
+            single_epoch_step = len(self.train_dataloader()) + 1
+            self.args.maxsteps = self.args.max_epochs * single_epoch_step
+            self.args.warm_up_steps = int(single_epoch_step * self.args.warmup_epoch)
 
     def get_data_config(self):
         """Return important settings of the dataset, which will be passed to instantiate models."""

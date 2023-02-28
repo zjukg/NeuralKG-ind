@@ -19,6 +19,8 @@ from tqdm import tqdm
 from scipy.special import softmax
 from scipy.sparse import csc_matrix
 from collections import defaultdict as ddict
+from torch.nn import Parameter
+from torch.nn.init import xavier_normal_
 
 
 def import_class(module_and_class_name: str) -> type:
@@ -45,6 +47,11 @@ def load_config(args, config_path):
         config = yaml.safe_load(f)
         args.__dict__.update(config)
     return args
+
+def get_param(*shape):
+    param = Parameter(torch.zeros(shape))
+    xavier_normal_(param)
+    return param 
 
 def deserialize(data):
     data_tuple = pickle.loads(data)

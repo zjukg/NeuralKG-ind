@@ -45,14 +45,19 @@ class ConvE(Model):
         # Setting dropout
         self.inp_drop = torch.nn.Dropout(self.args.inp_drop)
         self.hid_drop = torch.nn.Dropout(self.args.hid_drop)
+        
+        # conve
         self.feg_drop = torch.nn.Dropout2d(self.args.fet_drop)
+        # segnn
+        self.fc_drop = torch.nn.Dropout(self.args.fc_drop)
+        
         # Setting net model
-        self.conv1 = torch.nn.Conv2d(1, 32, (3, 3), 1, 0, bias=True)
+        self.conv1 = torch.nn.Conv2d(1, out_channels=self.args.out_channel, kernel_size=self.args.ker_sz, stride=1, padding=0, bias=False)
         self.bn0 = torch.nn.BatchNorm2d(1)
-        self.bn1 = torch.nn.BatchNorm2d(32)
+        self.bn1 = torch.nn.BatchNorm2d(self.args.out_channel)
         self.bn2 = torch.nn.BatchNorm1d(self.args.emb_dim)
         self.register_parameter('b', torch.nn.Parameter(torch.zeros(self.args.num_ent)))
-        self.fc = torch.nn.Linear(self.args.hid_size,self.args.emb_dim)
+        self.fc = torch.nn.Linear(self.args.hid_size,self.args.emb_dim, bias=self.args.fc_bias)
 
     def concat(self, head_emb, rela_emb):
         stack_input = torch.cat([head_emb, rela_emb], 2)
@@ -83,16 +88,31 @@ class ConvE(Model):
         x = self.conv1(x)
         x = self.bn1(x)
         x = torch.nn.functional.relu(x)
-        x = self.feg_drop(x)
+
+        if self.args.model_name == 'SEGNN':
+            x = self.fc_drop(x)
+        else:
+            x = self.feg_drop(x)
+        
         x = x.view(x.shape[0], -1)
         x = self.fc(x)
-        x = self.hid_drop(x)
-        x = self.bn2(x)
-        x = torch.nn.functional.relu(x)
+        
+        if self.args.model_name == 'SEGNN':
+            x = self.bn2(x)
+            x = torch.nn.functional.relu(x)
+            x = self.hid_drop(x)
+        else:
+            x = self.hid_drop(x)
+            x = self.bn2(x)
+            x = torch.nn.functional.relu(x)
+        
         x = torch.mm(x, self.emb_ent.weight.transpose(1,0)) if choose_emb == None \
             else torch.mm(x, choose_emb.transpose(1, 0)) 
+        
+        if self.args.model_name == 'SEGNN':
+            return x
+        
         x += self.b.expand_as(x)
-        x = torch.sigmoid(x)
         return x
 
     def forward(self, triples):
