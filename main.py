@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 # from torch._C import T
 # from train import Trainer
+import sys
+sys.path.append('./src')
 
 import pytorch_lightning as pl
 from pytorch_lightning import seed_everything
