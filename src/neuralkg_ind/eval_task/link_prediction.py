@@ -151,7 +151,7 @@ def head_predict_SEGNN(batch, ent_emb, rel_emb, model):
     rel_idx = [pos_triple[:, 1][i] + 11 for i in range(len(pos_triple[:, 1]))]
     rel_idx = torch.tensor(rel_idx)
     filter_head = batch["filter_head"]
-    pred_score = model.predictor.score_func(ent_emb[tail_idx], rel_emb[rel_idx], ent_emb)
+    pred_score = model.predictor.score_func(ent_emb[tail_idx], rel_emb[rel_idx], model.concat, ent_emb)
     return calc_ranks_SEGNN(head_idx, filter_head, pred_score)
 
 
@@ -171,7 +171,7 @@ def tail_predict_SEGNN(batch, ent_emb, rel_emb, model):
     rel_idx = pos_triple[:, 1]
     tail_idx = pos_triple[:, 2]
     filter_tail = batch["filter_tail"]
-    pred_score = model.predictor.score_func(ent_emb[head_idx], rel_emb[rel_idx], ent_emb)
+    pred_score = model.predictor.score_func(ent_emb[head_idx], rel_emb[rel_idx], model.concat, ent_emb)
     return calc_ranks_SEGNN(tail_idx, filter_tail, pred_score)
 
 

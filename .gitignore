@@ -288,9 +288,11 @@ state/
 output/
 training/
 wandb/
+config/
 __pycache__
 *.pyc
 docs/
 launch.json
 *.mdb
 *.pkl
+
