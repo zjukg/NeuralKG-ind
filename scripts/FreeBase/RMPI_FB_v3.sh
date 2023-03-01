@@ -35,6 +35,7 @@ CUDA_VISIBLE_DEVICES=$GPU python -u main.py \
     --data_path $DATA_PATH \
     --db_path $DB_PATH \
     --pk_path $PK_PATH \
+    --test_db_path $TEST_DB_PATH \
     --eval_task $EVAL_TASK \
     --train_sampler_class $TRAIN_SAMPLER_CLASS \
     --valid_sampler_class $VALID_SAMPLER_CLASS \
