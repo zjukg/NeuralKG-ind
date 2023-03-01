@@ -19,6 +19,7 @@ EVAL_BS=16
 TEST_BS=1
 MARGIN=10.0
 LR=1e-3
+REDUCTION=sum
 CHECK_PER_STEP=455
 EARLY_STOP_PATIENCE=20
 NUM_WORKERS=20
@@ -49,6 +50,7 @@ CUDA_VISIBLE_DEVICES=$GPU python -u main.py \
     --test_bs $TEST_BS \
     --margin $MARGIN \
     --lr $LR \
+    --reduction $REDUCTION \
     --check_per_step $CHECK_PER_STEP \
     --early_stop_patience $EARLY_STOP_PATIENCE \
     --num_workers $NUM_WORKERS \
