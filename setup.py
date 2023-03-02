@@ -10,11 +10,11 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name='neuralkg_ind',
-    version='1.0.21',
+    version='1.0.0',
     author='ZJUKG',
-    author_email='xnchen2020@zju.edu.cn',
+    author_email='22151303@zju.edu.cn',
     url='https://github.com/zjukg/NeuralKG-ind',
-    description='An Open Source Library for Diverse Representation Learning of Knowledge Graphs',
+    description=' A Python Library for Inductive Knowledge Graph Representation Learning',
     package_dir={"": "src"},
     packages=setuptools.find_packages("src"),
     classifiers=[
