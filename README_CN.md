@@ -254,7 +254,7 @@ parameters:
 
 😃我们使用colab提供部分notebook供用户使用我们的工具包
 
-[![Colab Notebook](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/drive/folders/1OyuxvdjRNFzRuheNZaGGCsPe75T1pW1P?usp=sharing)
+[![Colab Notebook](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1r1SpUI60CukwUq8KabEQ2Gq0UyWyI0QM?usp=sharing)
 
 <br>
 

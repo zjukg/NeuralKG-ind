@@ -260,7 +260,8 @@ There are some reproduced model results on FB15K-237 dataset and partial results
 
 😃We use colab to provide some notebooks to help users use our library.
 
-[![Colab Notebook](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/drive/folders/1OyuxvdjRNFzRuheNZaGGCsPe75T1pW1P?usp=sharing)
+[![Colab Notebook](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1r1SpUI60CukwUq8KabEQ2Gq0UyWyI0QM?usp=sharing)
+
 
 <br>
 
