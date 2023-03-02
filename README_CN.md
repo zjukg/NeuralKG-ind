@@ -3,19 +3,16 @@
     <a href=""> <img src="pics/logo.png" width="400"/></a>
 <p>
 <p align="center">  
-    <a href="http://neuralkg.zjukg.cn/">
-        <img alt="Website" src="https://img.shields.io/badge/website-online-orange">
-    </a>
-    <a href="https://pypi.org/project/neuralkg/">
+    <a href="https://pypi.org/project/neuralkg-ind/">
         <img alt="Pypi" src="https://img.shields.io/pypi/v/neuralkg">
     </a>
-    <a href="https://github.com/zjukg/NeuralKG/blob/main/LICENSE">
+    <a href="https://github.com/zjukg/NeuralKG-ind/blob/main/LICENSE">
         <img alt="Pypi" src="https://img.shields.io/badge/license-Apache--2.0-yellowgreen">
     </a>
     <!-- <a href="">
         <img alt="LICENSE" src="https://img.shields.io/badge/license-MIT-brightgreen">
     </a> -->
-    <a href="https://zjukg.github.io/NeuralKG/index.html">
+    <a href="https://zjukg.github.io/NeuralKG-ind/neuralkg_ind.model.html">
         <img alt="Documentation" src="https://img.shields.io/badge/Doc-online-blue">
     </a>
 </p>
@@ -95,10 +92,10 @@ NeuralKG-ind在自定义知识图谱demo_kg上运行的示例。
     <tr>
         <td rowspan="3">传统知识图谱表示学习方法</td><td>传统知识图谱嵌入</td><td><a href="https://papers.nips.cc/paper/2013/hash/1cecc7a77928ca8133fa24680a88d2f9-Abstract.html">TransE</a>, <a href="https://ojs.aaai.org/index.php/AAAI/article/view/8870">TransH</a>, <a href="https://www.aaai.org/ocs/index.php/AAAI/AAAI15/paper/viewFile/9571/9523/">TransR</a>, <a href="http://proceedings.mlr.press/v48/trouillon16.pdf">ComplEx</a>, <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/ICLR2015_updated.pdf">DistMult</a>, <a href="https://arxiv.org/abs/1902.10197">RotatE</a>, <a href="https://arxiv.org/abs/1707.01476">ConvE</a>, <a href="https://arxiv.org/pdf/2007.06267.pdf">BoxE</a>, <a href="https://arxiv.org/abs/1903.04750">CrossE</a>, <a href="https://arxiv.org/abs/1802.04868">SimplE</a>, <a href="https://arxiv.org/abs/1911.09419">HAKE</a>, <a href="https://arxiv.org/pdf/2011.03798.pdf">PairRE</a>, <a href="https://ojs.aaai.org/index.php/AAAI/article/view/16850">DualE</a></td>
         <tr>
-            <td>基于图神经网络的知识图谱嵌入</td><td><a herf="https://arxiv.org/abs/1703.06103">RGCN</a>, <a herf="https://arxiv.org/abs/1906.01195">KBAT</a>, <a herf="https://arxiv.org/abs/1906.01195">CompGCN</a>, <a herf="https://link.springer.com/chapter/10.1007/978-981-15-3412-6_8">XTransE</a></td>
+            <td>基于图神经网络的知识图谱嵌入</td><td><a href="https://arxiv.org/abs/1703.06103">RGCN</a>, <a href="https://arxiv.org/abs/1906.01195">KBAT</a>, <a href="https://arxiv.org/abs/1906.01195">CompGCN</a>, <a href="https://link.springer.com/chapter/10.1007/978-981-15-3412-6_8">XTransE</a></td>
         </tr>
         <tr>
-            <td>基于规则的知识图谱嵌入</td><td><a herf="https://aclanthology.org/P18-1011/">ComplEx-NNE+AER</a>, <a herf="https://arxiv.org/abs/1711.11231">RUGE</a>, <a herf="https://arxiv.org/abs/1903.08948">IterE</a></td>
+            <td>基于规则的知识图谱嵌入</td><td><a href="https://aclanthology.org/P18-1011/">ComplEx-NNE+AER</a>, <a href="https://arxiv.org/abs/1711.11231">RUGE</a>, <a href="https://arxiv.org/abs/1903.08948">IterE</a></td>
         </tr>
     </tr>
     <tr>
