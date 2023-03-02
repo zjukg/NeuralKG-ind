@@ -35,7 +35,7 @@ NeuralKG-ind is a python-based library for inductive knowledge graph representat
   - [Feb, 2023](#feb-2023)
 - [Overview](#overview)
 - [Demo](#demo)
-- [Implemented KGEs](#implemented-kges)
+- [Implemented Methods](#implemented-methods)
 - [Quick Start](#quick-start)
   - [Installation](#installation)
   - [Training](#training)
@@ -44,8 +44,7 @@ NeuralKG-ind is a python-based library for inductive knowledge graph representat
 - [Reproduced Results](#reproduced-results)
 - [Notebook Guide](#notebook-guide)
 - [Detailed Documentation](#detailed-documentation)
-- [Citation](#citation)
-- [NeuralKG Core Team](#neuralkg-core-team)
+- [NeuralKG-ind Core Team](#neuralkg-ind-core-team)
 <!-- * [To do](#to-do) -->
 
 
@@ -266,7 +265,7 @@ There are some reproduced model results on FB15K-237 dataset and partial results
 <br>
 
 # Detailed Documentation
-https://zjukg.github.io/NeuralKG/neuralkg.html
+https://zjukg.github.io/NeuralKG-ind/neuralkg_ind.model.html
 
 
 <!-- <br> -->

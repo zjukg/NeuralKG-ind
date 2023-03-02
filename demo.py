@@ -19,7 +19,7 @@ def main(arg_path):
 
     print('This demo is powered by \033[1;32mNeuralKG_ind \033[0m')
 
-    train_path = input("\033[1;32mPlease input the train graph path: \033[0m")    
+    train_path = input("\033[1;32mPlease input the train graph path: \033[0m") #./dataset/NELL_v1/
     args.data_path = train_path
 
     support_entity = set()
@@ -35,11 +35,11 @@ def main(arg_path):
     print(f'\033[1;32mThe support relation set\033[0m: [{support_relation[0]}, {support_relation[1]}, {support_relation[2]}, ...]')
     print(f'\033[1;32mAttention:\033[0m The relation of query should exist in the relation set.')
 
-    model_path = input("\033[1;32mPlease input the model path: \033[0m")
+    model_path = input("\033[1;32mPlease input the model path: \033[0m") # /Grail/demo.ckpt
     model_path = './config'+model_path
     args.checkpoint_dir = model_path
 
-    test_path = input("\033[1;32mPlease input the test support graph path: \033[0m")
+    test_path = input("\033[1;32mPlease input the test support graph path: \033[0m")  # ./dataset/NELL_v1_ind/
     test_triple = dict()
     with open(test_path+'test.txt', 'r') as f:
         for (id, line) in enumerate(f.readlines()):
@@ -48,7 +48,7 @@ def main(arg_path):
     print('Use the trained model to predict tail entity, in the inductive task setting. Please input query.')
 
     while 1:
-        query = input("\033[1;32mQuery: \033[0m")
+        query = input("\033[1;32mQuery: \033[0m") # (televisionstation_wvta, branch_office, ?) or (televisionstation_wvta, agent_belongs_to_organization, ?)
         head = 'concept:'+query[1:-1].split(', ')[0].replace('_',':')
         relation = 'concept:'+query[1:-1].split(', ')[1].replace('_','')
         if relation in support_relation:
