@@ -20,13 +20,13 @@ calc_hits:
 check_per_epoch: 2
 check_val_every_n_epoch: 1
 checkpoint_callback: null
-checkpoint_dir: output/link_prediction/NELL_v1/Grail/demo.ckpt
+checkpoint_dir: config/Grail/demo.ckpt
 coef_dgi_loss: 5
 comp_ht: sum
 config_path: ''
 constrained_neg_prob: 0.0
 data_class: KGDataModule
-data_path: ./dataset/WN18RR
+data_path: ./dataset/NELL
 dataset_name: NELL_v1
 db_path: dataset/NELL_v1_subgraph
 decoder_model: null

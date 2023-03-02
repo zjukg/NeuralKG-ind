@@ -36,7 +36,7 @@ def main(arg_path):
     print(f'\033[1;32mAttention:\033[0m The relation of query should exist in the relation set.')
 
     model_path = input("\033[1;32mPlease input the model path: \033[0m")
-    model_path = './output/link_prediction/'+train_path.split('/')[-2]+model_path
+    model_path = './config'+model_path
     args.checkpoint_dir = model_path
 
     test_path = input("\033[1;32mPlease input the test support graph path: \033[0m")
@@ -126,7 +126,7 @@ def main(arg_path):
     else:
         test_path = args.checkpoint_dir
 
-    #trainer.test(lit_model, datamodule=kgdata)
+    trainer.test(lit_model, datamodule=kgdata)
 
     lit_model.load_state_dict(torch.load(test_path)["state_dict"])
     lit_model.eval()
