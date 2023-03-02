@@ -292,7 +292,6 @@ config/
 logging/
 __pycache__
 *.pyc
-docs/
 launch.json
 *.mdb
 *.pkl
