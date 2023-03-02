@@ -24,7 +24,7 @@
     <b> English | <a href="https://github.com/zjukg/NeuralKG-ind/blob/main/README_CN.md">中文</a> </b>
 </p>
 
-NeuralKG-ind is a python-based library for inductive knowledge graph representation learning, which includes **standardized processes**, **rich existing methods**, **decoupled modules**, and **comprehensive evaluation metrics**. We provide [comprehensive documents](https://zjukg.github.io/NeuralKG/index.html) for beginners.
+NeuralKG-ind is a python-based library for inductive knowledge graph representation learning, which includes **standardized processes**, **rich existing methods**, **decoupled modules**, and **comprehensive evaluation metrics**. We provide [comprehensive documents](https://zjukg.github.io/NeuralKG-ind/neuralkg_ind.model.html) for beginners.
 
 <br>
 
@@ -91,11 +91,23 @@ There is a demonstration of NeuralKG-ind.
 
 # Implemented Methods
 
-|Components| Models |
-|:---|:--------------:|
-|KGEModel|[TransE](https://papers.nips.cc/paper/2013/hash/1cecc7a77928ca8133fa24680a88d2f9-Abstract.html), [TransH](https://ojs.aaai.org/index.php/AAAI/article/view/8870), [TransR](https://www.aaai.org/ocs/index.php/AAAI/AAAI15/paper/viewFile/9571/9523/), [ComplEx](http://proceedings.mlr.press/v48/trouillon16.pdf), [DistMult](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/ICLR2015_updated.pdf), [RotatE](https://arxiv.org/abs/1902.10197), [ConvE](https://arxiv.org/abs/1707.01476), [BoxE](https://arxiv.org/pdf/2007.06267.pdf), [CrossE](https://arxiv.org/abs/1903.04750), [SimplE](https://arxiv.org/abs/1802.04868), [HAKE](https://arxiv.org/abs/1911.09419), [PairRE](https://arxiv.org/pdf/2011.03798.pdf), [DualE](https://ojs.aaai.org/index.php/AAAI/article/view/16850)|
-|GNNModel|[RGCN](https://arxiv.org/abs/1703.06103), [KBAT](https://arxiv.org/abs/1906.01195), [CompGCN](https://arxiv.org/abs/1906.01195), [XTransE](https://link.springer.com/chapter/10.1007/978-981-15-3412-6_8), [<font color="#dd0000">GraIL</font>](https://arxiv.org/abs/1911.06962), [<font color="#dd0000">CoMPILE</font>](https://arxiv.org/pdf/2012.08911), [<font color="#dd0000">SNRI</font>](https://arxiv.org/abs/2208.00850), [<font color="#dd0000">RMPI</font>](https://arxiv.org/abs/2210.03994), [<font color="#dd0000">MorsE</font>](https://arxiv.org/abs/2110.14170)|
-|RuleModel|[ComplEx-NNE+AER](https://aclanthology.org/P18-1011/), [RUGE](https://arxiv.org/abs/1711.11231), [IterE](https://arxiv.org/abs/1903.08948)|
+<table>
+    <tr>  
+        <th rowspan="1">Pattern</th><th colspan="1">Components</th><th colspan="1">Models</th>
+    </tr>
+    <tr>
+        <td rowspan="3">Traditional KGRL method</td><td>Conventional KGEs</td><td><a href="https://papers.nips.cc/paper/2013/hash/1cecc7a77928ca8133fa24680a88d2f9-Abstract.html">TransE</a>, <a href="https://ojs.aaai.org/index.php/AAAI/article/view/8870">TransH</a>, <a href="https://www.aaai.org/ocs/index.php/AAAI/AAAI15/paper/viewFile/9571/9523/">TransR</a>, <a href="http://proceedings.mlr.press/v48/trouillon16.pdf">ComplEx</a>, <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/ICLR2015_updated.pdf">DistMult</a>, <a href="https://arxiv.org/abs/1902.10197">RotatE</a>, <a href="https://arxiv.org/abs/1707.01476">ConvE</a>, <a href="https://arxiv.org/pdf/2007.06267.pdf">BoxE</a>, <a href="https://arxiv.org/abs/1903.04750">CrossE</a>, <a href="https://arxiv.org/abs/1802.04868">SimplE</a>, <a href="https://arxiv.org/abs/1911.09419">HAKE</a>, <a href="https://arxiv.org/pdf/2011.03798.pdf">PairRE</a>, <a href="https://ojs.aaai.org/index.php/AAAI/article/view/16850">DualE</a></td>
+        <tr>
+            <td>GNN-based KGEs</td><td><a herf="https://arxiv.org/abs/1703.06103">RGCN</a>, <a herf="https://arxiv.org/abs/1906.01195">KBAT</a>, <a herf="https://arxiv.org/abs/1906.01195">CompGCN</a>, <a herf="https://link.springer.com/chapter/10.1007/978-981-15-3412-6_8">XTransE</a></td>
+        </tr>
+        <tr>
+            <td>Rule-based KGEs</td><td><a herf="https://aclanthology.org/P18-1011/">ComplEx-NNE+AER</a>, <a herf="https://arxiv.org/abs/1711.11231">RUGE</a>, <a herf="https://arxiv.org/abs/1903.08948">IterE</a></td>
+        </tr>
+    </tr>
+    <tr>
+        <td><strong>Inductive KGRL method</strong></td><td><strong>GNN-based inductive models</strong></td><td><a href="https://arxiv.org/abs/1911.06962">GraIL</a>, <a href="https://arxiv.org/pdf/2012.08911">CoMPILE</a>, <a href="https://arxiv.org/abs/2208.00850">SNRI</a>, <a href="https://arxiv.org/abs/2210.03994">RMPI</a>, <a href="https://arxiv.org/abs/2110.14170">MorsE</a>
+    </tr>
+</table>
 
 <br>
 
@@ -120,9 +132,22 @@ pip install torch==1.9.1+cu111 -f https://download.pytorch.org/whl/torch_stable.
 ```
 pip install dgl-cu111 dglgo -f https://data.dgl.ai/wheels/repo.html
 ```
-
++ Install lmdb
+```
+pip install lmdb==1.4.0
+```
++ Install sklearn
+```
+pip install scikit-learn==1.2.1
+```
 **Step3** Install package
 
++ From Pypi
+```bash
+pip install neuralkg_ind
+```
+
++ From Source
 ```bash
 git clone https://github.com/zjukg/NeuralKG-ind.git
 cd NeuralKG-ind
@@ -181,7 +206,7 @@ parameters:
 <br>
 
 # Reproduced Results
-There are some reproduced model results on FB15K-237 dataset and partial results on NELL-995 using NeuralKG as below. See more results in [here](https://zjukg.github.io/NeuralKG/result.html)
+There are some reproduced model results on FB15K-237 dataset and partial results on NELL-995 using NeuralKG as below. See more results in [here](https://zjukg.github.io/NeuralKG-ind/neuralkg_ind.model.html)
 
 
 <table>

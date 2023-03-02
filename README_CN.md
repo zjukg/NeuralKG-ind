@@ -20,10 +20,10 @@
     </a>
 </p>
 <h1 align="center">
-    <p>用于归纳知识图谱表示学习的Python工具包</p>
+    <p>用于归纳式知识图谱表示学习的Python工具包</p>
 </h1>
 
-NeuralKG-ind是一个基于python的归纳知识图表示学习工具包，它包括**标准化过程**、**丰富的现有模型**、**解耦模块**和**综合评估指标**。我们为初学者提供了详细的[文档](https://zjukg.github.io/NeuralKG/index.html)。
+NeuralKG-ind是一个基于python的归纳知识图表示学习工具包，它包括**标准化过程**、**丰富的现有模型**、**解耦模块**和**综合评估指标**。我们为初学者提供了详细的[文档](https://zjukg.github.io/NeuralKG-ind/neuralkg_ind.model.html)。
 <br>
 
 # 目录
@@ -74,7 +74,7 @@ NeuralKG-ind工具包整体基于[PyTorch Lightning](https://www.pytorchlightnin
 
 + **解耦模块。** 我们提供了许多解耦模块，如子图提取、节点标记、邻居聚合、图神经网络层和KGE评分方法，使用户能够快速地构建新的归纳知识图谱表示学习模型。
 
-+ **长期支持。** 我们为NeuralKG-ind提供长期的技术支持，包括维护使用文档、创建更好的使用体验、添加新的模型、解决问题以及处理pull request。
++ **长期支持。** 我们为NeuralKG-ind提供长期的技术支持，包括维护使用文档、创建更好的使用体验、添加新的模型、解决存在的问题以及处理pull request。
 
 <br>
 
@@ -88,11 +88,23 @@ NeuralKG-ind在自定义知识图谱demo_kg上运行的示例。
 
 # 实现模型
 
-|类别| 模型 |
-|:--:|:--------------:|
-|传统知识图谱嵌入（KGEModel）|[TransE](https://papers.nips.cc/paper/2013/hash/1cecc7a77928ca8133fa24680a88d2f9-Abstract.html), [TransH](https://ojs.aaai.org/index.php/AAAI/article/view/8870), [TransR](https://www.aaai.org/ocs/index.php/AAAI/AAAI15/paper/viewFile/9571/9523/), [ComplEx](http://proceedings.mlr.press/v48/trouillon16.pdf), [DistMult](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/ICLR2015_updated.pdf), [RotatE](https://arxiv.org/abs/1902.10197), [ConvE](https://arxiv.org/abs/1707.01476), [BoxE](https://arxiv.org/pdf/2007.06267.pdf), [CrossE](https://arxiv.org/abs/1903.04750), [SimplE](https://arxiv.org/abs/1802.04868), [HAKE](https://arxiv.org/abs/1911.09419), [PairRE](https://arxiv.org/pdf/2011.03798.pdf), [DualE](https://ojs.aaai.org/index.php/AAAI/article/view/16850)|
-|基于图神经网络的知识图谱嵌入（GNNModel）|[RGCN](https://arxiv.org/abs/1703.06103), [KBAT](https://arxiv.org/abs/1906.01195), [CompGCN](https://arxiv.org/abs/1906.01195), [XTransE](https://link.springer.com/chapter/10.1007/978-981-15-3412-6_8), [<font color="#dd0000">GraIL</font>](https://arxiv.org/abs/1911.06962), [<font color="#dd0000">CoMPILE</font>](https://arxiv.org/pdf/2012.08911), [<font color="#dd0000">SNRI</font>](https://arxiv.org/abs/2208.00850), [<font color="#dd0000">RMPI</font>](https://arxiv.org/abs/2210.03994), [<font color="#dd0000">MorsE</font>](https://arxiv.org/abs/2110.14170)|
-|基于规则的知识图谱嵌入（RuleModel）|[ComplEx-NNE+AER](https://aclanthology.org/P18-1011/), [RUGE](https://arxiv.org/abs/1711.11231), [IterE](https://arxiv.org/abs/1903.08948)|
+<table>
+    <tr>  
+        <th rowspan="1">方法</th><th colspan="1">类别</th><th colspan="1">模型</th>
+    </tr>
+    <tr>
+        <td rowspan="3">传统知识图谱表示学习方法</td><td>传统知识图谱嵌入</td><td><a href="https://papers.nips.cc/paper/2013/hash/1cecc7a77928ca8133fa24680a88d2f9-Abstract.html">TransE</a>, <a href="https://ojs.aaai.org/index.php/AAAI/article/view/8870">TransH</a>, <a href="https://www.aaai.org/ocs/index.php/AAAI/AAAI15/paper/viewFile/9571/9523/">TransR</a>, <a href="http://proceedings.mlr.press/v48/trouillon16.pdf">ComplEx</a>, <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/ICLR2015_updated.pdf">DistMult</a>, <a href="https://arxiv.org/abs/1902.10197">RotatE</a>, <a href="https://arxiv.org/abs/1707.01476">ConvE</a>, <a href="https://arxiv.org/pdf/2007.06267.pdf">BoxE</a>, <a href="https://arxiv.org/abs/1903.04750">CrossE</a>, <a href="https://arxiv.org/abs/1802.04868">SimplE</a>, <a href="https://arxiv.org/abs/1911.09419">HAKE</a>, <a href="https://arxiv.org/pdf/2011.03798.pdf">PairRE</a>, <a href="https://ojs.aaai.org/index.php/AAAI/article/view/16850">DualE</a></td>
+        <tr>
+            <td>基于图神经网络的知识图谱嵌入</td><td><a herf="https://arxiv.org/abs/1703.06103">RGCN</a>, <a herf="https://arxiv.org/abs/1906.01195">KBAT</a>, <a herf="https://arxiv.org/abs/1906.01195">CompGCN</a>, <a herf="https://link.springer.com/chapter/10.1007/978-981-15-3412-6_8">XTransE</a></td>
+        </tr>
+        <tr>
+            <td>基于规则的知识图谱嵌入</td><td><a herf="https://aclanthology.org/P18-1011/">ComplEx-NNE+AER</a>, <a herf="https://arxiv.org/abs/1711.11231">RUGE</a>, <a herf="https://arxiv.org/abs/1903.08948">IterE</a></td>
+        </tr>
+    </tr>
+    <tr>
+        <td><strong>归纳式知识图谱表示学习方法</strong></td><td><strong>基于图神经网络的归纳式知识图谱嵌入</strong></td><td><a href="https://arxiv.org/abs/1911.06962">GraIL</a>, <a href="https://arxiv.org/pdf/2012.08911">CoMPILE</a>, <a href="https://arxiv.org/abs/2208.00850">SNRI</a>, <a href="https://arxiv.org/abs/2210.03994">RMPI</a>, <a href="https://arxiv.org/abs/2110.14170">MorsE</a>
+    </tr>
+</table>
 <br>
 
 # 快速上手
@@ -105,7 +117,7 @@ NeuralKG-ind在自定义知识图谱demo_kg上运行的示例。
 conda create -n neuralkg-ind python=3.8
 conda activate neuralkg-ind
 ```
-**Step2** 下载适用您CUDA版本的的PyTorch的DGL，下面我们提供一个基于CUDA 11.1的下载样例 
+**Step2** 下载适用您CUDA版本的的PyTorch和DGL，下面我们提供一个基于CUDA 11.1的下载样例 
 
 +  下载PyTorch
 ```
@@ -115,12 +127,25 @@ pip install torch==1.9.1+cu111 -f https://download.pytorch.org/whl/torch_stable.
 ```
 pip install dgl-cu111 dglgo -f https://data.dgl.ai/wheels/repo.html
 ```
-
++ 下载lmdb
+```
+pip install lmdb==1.4.0
+```
++ 下载sklearn
+```
+pip install scikit-learn==1.2.1
+```
 **Step3** 安装NeuralKG-ind
 
++ From Pypi
 ```bash
-git clone https://github.com/zjukg/NeuralKG.git
-cd NeuralKG
+pip install neuralkg_ind
+```
+
++ From Source
+```bash
+git clone https://github.com/zjukg/NeuralKG-ind.git
+cd NeuralKG-ind
 python setup.py install
 ```
 ## 模型训练
@@ -177,7 +202,7 @@ parameters:
 <br>
 
 # 复现结果
-下面展示了使用NeuralKG-ind的不同模型在FB15k-237上的结果和在NELL-995上的部分结果，更多结果请访问[此处](https://zjukg.github.io/NeuralKG/result.html)。
+下面展示了使用NeuralKG-ind的不同模型在FB15k-237上的结果和在NELL-995上的部分结果，更多结果请访问[此处](https://zjukg.github.io/NeuralKG-ind/neuralkg_ind.model.html)。
 
 
 <table>
@@ -271,5 +296,5 @@ https://zjukg.github.io/NeuralKG-ind/neuralkg_ind.model.html
 
 # NeuralKG-ind核心团队
 
-**浙江大学**: 张文，姚祯，陈名杨，黄志伟， 陈华钧
+**浙江大学**: 张文，姚祯，陈名杨，黄志伟，陈华钧
 
