@@ -1,8 +1,6 @@
 import pytorch_lightning as pl
 import neuralkg_ind
 from neuralkg_ind.utils.tools import *
-import sys
-sys.path.append('./src')
 args = neuralkg_ind.setup_parser()
 data2pkl(args.dataset_name)
 gen_subgraph_datasets(args)
