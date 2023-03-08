@@ -4,7 +4,7 @@
 <p>
 <p align="center">  
     <a href="https://pypi.org/project/neuralkg-ind/">
-        <img alt="Pypi" src="https://img.shields.io/pypi/v/neuralkg">
+        <img alt="Pypi" src="https://img.shields.io/pypi/v/neuralkg-ind">
     </a>
     <a href="https://github.com/zjukg/NeuralKG-ind/blob/main/LICENSE">
         <img alt="Pypi" src="https://img.shields.io/badge/license-Apache--2.0-yellowgreen">
