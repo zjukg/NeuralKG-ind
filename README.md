@@ -206,7 +206,7 @@ parameters:
 <br>
 
 # Reproduced Results
-There are some reproduced model results on FB15K-237 dataset and partial results on NELL-995 using NeuralKG as below. See more results in [here](https://zjukg.github.io/NeuralKG-ind/neuralkg_ind.model.html)
+There are some reproduced model results on FB15K-237 dataset and partial results on NELL-995 using NeuralKG as below. See more results in [here](https://zjukg.github.io/NeuralKG-ind/result.html)
 
 
 <table>

@@ -4,7 +4,7 @@
 <p>
 <p align="center">  
     <a href="https://pypi.org/project/neuralkg-ind/">
-        <img alt="Pypi" src="https://img.shields.io/pypi/v/neuralkg">
+        <img alt="Pypi" src="https://img.shields.io/pypi/v/neuralkg-ind">
     </a>
     <a href="https://github.com/zjukg/NeuralKG-ind/blob/main/LICENSE">
         <img alt="Pypi" src="https://img.shields.io/badge/license-Apache--2.0-yellowgreen">
@@ -199,7 +199,7 @@ parameters:
 <br>
 
 # 复现结果
-下面展示了使用NeuralKG-ind的不同模型在FB15k-237上的结果和在NELL-995上的部分结果，更多结果请访问[此处](https://zjukg.github.io/NeuralKG-ind/neuralkg_ind.model.html)。
+下面展示了使用NeuralKG-ind的不同模型在FB15k-237上的结果和在NELL-995上的部分结果，更多结果请访问[此处](https://zjukg.github.io/NeuralKG-ind/result.html)。
 
 
 <table>
