@@ -147,13 +147,13 @@ class MetaGNNLitModel(BaseLitModel):
         elif self.args.eval_task == 'triple_classification':
             results = dict()
             pos_sample = batch["positive_sample"]
-            score_pos = self.model(pos_sample, self.ent_emb)
+            score_pos = self.model(pos_sample, ent_emb)
             score_pos = score_pos.squeeze(1).detach().cpu().tolist()
             results["pos_scores"] = score_pos
             results["pos_labels"] = batch["positive_label"]
 
             neg_sample = batch["negative_sample"]
-            score_neg = self.model(neg_sample, self.ent_emb)
+            score_neg = self.model(neg_sample, ent_emb)
             score_neg = score_neg.squeeze(1).detach().cpu().tolist()
             results["neg_scores"] = score_neg
             results["neg_labels"] = batch["negative_label"]
