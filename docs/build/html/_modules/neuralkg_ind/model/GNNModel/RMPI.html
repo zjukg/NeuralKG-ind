@@ -44,7 +44,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Package</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../../neuralkg_ind.html">neuralkg_ind package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../neuralkg_ind.html">NeuralKG-ind</a></li>
 </ul>
 
         </div>
@@ -78,7 +78,7 @@
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <div class="viewcode-block" id="RMPI"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.RMPI.RMPI">[docs]</a><span class="k">class</span> <span class="nc">RMPI</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;`Relational Message Passing for Fully Inductive Knowledge Graph Completion`_ (RMPI), which passes messages directly </span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;`Relational Message Passing for Fully Inductive Knowledge Graph Completion`_ (RMPI), which passes messages directly </span>
 <span class="sd">        between relations to make full use of the relation patterns for subgraph reasoning with new techniques on graph </span>
 <span class="sd">        transformation, graph pruning, relationaware neighborhood attention, addressing empty subgraphs, etc.</span>
 
@@ -117,7 +117,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">drop</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Dropout</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">edge_dropout</span><span class="p">)</span>
 
 <div class="viewcode-block" id="RMPI.AggregateConv"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.RMPI.RMPI.AggregateConv">[docs]</a>    <span class="k">def</span> <span class="nf">AggregateConv</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">graph</span><span class="p">,</span> <span class="n">u_node</span><span class="p">,</span> <span class="n">v_node</span><span class="p">,</span> <span class="n">num_nodes</span><span class="p">,</span> <span class="n">num_edges</span><span class="p">,</span> <span class="n">aggr_flag</span><span class="p">,</span> <span class="n">is_drop</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Function of aggregating relation.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Function of aggregating relation.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            graph: Subgraph to corresponding triple.</span>
@@ -235,7 +235,7 @@
             <span class="k">return</span> <span class="n">rel_neighbor_embd</span></div>
 
 <div class="viewcode-block" id="RMPI.forward"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.RMPI.RMPI.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;calculating subgraphs score.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;calculating subgraphs score.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            data: Enclosing/disclosing subgraphs and relation labels.</span>

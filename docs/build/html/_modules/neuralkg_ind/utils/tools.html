@@ -44,7 +44,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Package</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../neuralkg_ind.html">neuralkg_ind package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../neuralkg_ind.html">NeuralKG-ind</a></li>
 </ul>
 
         </div>
@@ -98,7 +98,7 @@
 
 
 <div class="viewcode-block" id="import_class"><a class="viewcode-back" href="../../../neuralkg_ind.utils.html#neuralkg_ind.utils.tools.import_class">[docs]</a><span class="k">def</span> <span class="nf">import_class</span><span class="p">(</span><span class="n">module_and_class_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">type</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Import class from a module, e.g. &#39;model.TransE&#39;&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Import class from a module, e.g. &#39;model.TransE&#39;&quot;&quot;&quot;</span>
     <span class="n">module_name</span><span class="p">,</span> <span class="n">class_name</span> <span class="o">=</span> <span class="n">module_and_class_name</span><span class="o">.</span><span class="n">rsplit</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
     <span class="n">module</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="n">module_name</span><span class="p">)</span>
     <span class="n">class_</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">class_name</span><span class="p">)</span>
@@ -138,7 +138,7 @@
     <span class="k">return</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">keys</span><span class="p">,</span> <span class="n">data_tuple</span><span class="p">))</span></div>
 
 <div class="viewcode-block" id="set_logger"><a class="viewcode-back" href="../../../neuralkg_ind.utils.html#neuralkg_ind.utils.tools.set_logger">[docs]</a><span class="k">def</span> <span class="nf">set_logger</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Write logs to checkpoint and console</span>
 <span class="sd">    &#39;&#39;&#39;</span>
     <span class="n">dt</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
@@ -163,21 +163,21 @@
     <span class="p">)</span></div>
 
 <div class="viewcode-block" id="log_metrics"><a class="viewcode-back" href="../../../neuralkg_ind.utils.html#neuralkg_ind.utils.tools.log_metrics">[docs]</a><span class="k">def</span> <span class="nf">log_metrics</span><span class="p">(</span><span class="n">epoch</span><span class="p">,</span> <span class="n">metrics</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Print the evaluation logs</span>
 <span class="sd">    &#39;&#39;&#39;</span>
     <span class="k">for</span> <span class="n">metric</span> <span class="ow">in</span> <span class="n">metrics</span><span class="p">:</span>
         <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">: </span><span class="si">%.4f</span><span class="s1"> at epoch </span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">metric</span><span class="p">,</span> <span class="n">metrics</span><span class="p">[</span><span class="n">metric</span><span class="p">],</span> <span class="n">epoch</span><span class="p">))</span></div>
 
 <div class="viewcode-block" id="log_step_metrics"><a class="viewcode-back" href="../../../neuralkg_ind.utils.html#neuralkg_ind.utils.tools.log_step_metrics">[docs]</a><span class="k">def</span> <span class="nf">log_step_metrics</span><span class="p">(</span><span class="n">step</span><span class="p">,</span> <span class="n">metrics</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Print the evaluation logs for check_per_step</span>
 <span class="sd">    &#39;&#39;&#39;</span>
     <span class="k">for</span> <span class="n">metric</span> <span class="ow">in</span> <span class="n">metrics</span><span class="p">:</span>
         <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">: </span><span class="si">%.4f</span><span class="s1"> at step </span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">metric</span><span class="p">,</span> <span class="n">metrics</span><span class="p">[</span><span class="n">metric</span><span class="p">],</span> <span class="n">step</span><span class="p">))</span></div>
 
 <div class="viewcode-block" id="override_config"><a class="viewcode-back" href="../../../neuralkg_ind.utils.html#neuralkg_ind.utils.tools.override_config">[docs]</a><span class="k">def</span> <span class="nf">override_config</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Override model and data configuration</span>
 <span class="sd">    &#39;&#39;&#39;</span>
     
@@ -233,7 +233,7 @@
     <span class="k">return</span> <span class="n">tri_reidx</span><span class="p">,</span> <span class="nb">dict</span><span class="p">(</span><span class="n">ent_reidx</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="data2pkl"><a class="viewcode-back" href="../../../neuralkg_ind.utils.html#neuralkg_ind.utils.tools.data2pkl">[docs]</a><span class="k">def</span> <span class="nf">data2pkl</span><span class="p">(</span><span class="n">dataset_name</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;Store data in pickle&#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Store data in pickle&#39;&#39;&#39;</span>
     <span class="n">train_tri</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;./dataset/</span><span class="si">{}</span><span class="s1">/train.txt&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dataset_name</span><span class="p">))</span>
     <span class="n">train_tri</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="n">l</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">file</span><span class="o">.</span><span class="n">readlines</span><span class="p">()])</span>
@@ -494,7 +494,7 @@
     <span class="k">return</span> <span class="p">(</span><span class="n">str_id</span><span class="p">,</span> <span class="n">datum</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="links2subgraphs"><a class="viewcode-back" href="../../../neuralkg_ind.utils.html#neuralkg_ind.utils.tools.links2subgraphs">[docs]</a><span class="k">def</span> <span class="nf">links2subgraphs</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">graphs</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">max_label_value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">testing</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    extract enclosing subgraphs, write map mode + named dbs</span>
 <span class="sd">    &#39;&#39;&#39;</span>
     <span class="n">max_n_label</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])}</span>
@@ -653,7 +653,7 @@
     <span class="k">return</span> <span class="nb">set</span><span class="p">()</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="o">*</span><span class="n">lvls</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="incidence_matrix"><a class="viewcode-back" href="../../../neuralkg_ind.utils.html#neuralkg_ind.utils.tools.incidence_matrix">[docs]</a><span class="k">def</span> <span class="nf">incidence_matrix</span><span class="p">(</span><span class="n">adj_list</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    adj_list: List of sparse adjacency matrices</span>
 <span class="sd">    &#39;&#39;&#39;</span>
 
@@ -670,7 +670,7 @@
     <span class="k">return</span> <span class="n">ssp</span><span class="o">.</span><span class="n">csc_matrix</span><span class="p">((</span><span class="n">data</span><span class="p">,</span> <span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">)),</span> <span class="n">shape</span><span class="o">=</span><span class="n">dim</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="bfs_relational"><a class="viewcode-back" href="../../../neuralkg_ind.utils.html#neuralkg_ind.utils.tools.bfs_relational">[docs]</a><span class="k">def</span> <span class="nf">bfs_relational</span><span class="p">(</span><span class="n">adj</span><span class="p">,</span> <span class="n">roots</span><span class="p">,</span> <span class="n">max_nodes_per_hop</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    BFS for graphs.</span>
 <span class="sd">    Modified from dgl.contrib.data.knowledge_graph to accomodate node sampling</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -695,7 +695,7 @@
         <span class="n">current_lvl</span> <span class="o">=</span> <span class="nb">set</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">next_lvl</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="get_neighbors"><a class="viewcode-back" href="../../../neuralkg_ind.utils.html#neuralkg_ind.utils.tools.get_neighbors">[docs]</a><span class="k">def</span> <span class="nf">get_neighbors</span><span class="p">(</span><span class="n">adj</span><span class="p">,</span> <span class="n">nodes</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Takes a set of nodes and a graph adjacency matrix and returns a set of neighbors.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Takes a set of nodes and a graph adjacency matrix and returns a set of neighbors.</span>
 <span class="sd">    Directly copied from dgl.contrib.data.knowledge_graph&quot;&quot;&quot;</span>
     <span class="n">sp_nodes</span> <span class="o">=</span> <span class="n">sp_row_vec_from_idx_list</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">nodes</span><span class="p">),</span> <span class="n">adj</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
     <span class="n">sp_neighbors</span> <span class="o">=</span> <span class="n">sp_nodes</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">adj</span><span class="p">)</span>
@@ -704,7 +704,7 @@
 
 <div class="viewcode-block" id="sp_row_vec_from_idx_list"><a class="viewcode-back" href="../../../neuralkg_ind.utils.html#neuralkg_ind.utils.tools.sp_row_vec_from_idx_list">[docs]</a><span class="k">def</span> <span class="nf">sp_row_vec_from_idx_list</span><span class="p">(</span><span class="n">idx_list</span><span class="p">,</span> <span class="n">dim</span><span class="p">):</span>
 
-    <span class="sd">&quot;&quot;&quot;Create sparse vector of dimensionality dim from a list of indices.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Create sparse vector of dimensionality dim from a list of indices.&quot;&quot;&quot;</span>
     <span class="n">shape</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">dim</span><span class="p">)</span>
     <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">idx_list</span><span class="p">))</span>
     <span class="n">row_ind</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">idx_list</span><span class="p">))</span>
@@ -712,7 +712,7 @@
     <span class="k">return</span> <span class="n">ssp</span><span class="o">.</span><span class="n">csr_matrix</span><span class="p">((</span><span class="n">data</span><span class="p">,</span> <span class="p">(</span><span class="n">row_ind</span><span class="p">,</span> <span class="n">col_ind</span><span class="p">)),</span> <span class="n">shape</span><span class="o">=</span><span class="n">shape</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="ssp_multigraph_to_dgl"><a class="viewcode-back" href="../../../neuralkg_ind.utils.html#neuralkg_ind.utils.tools.ssp_multigraph_to_dgl">[docs]</a><span class="k">def</span> <span class="nf">ssp_multigraph_to_dgl</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">n_feats</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Converting ssp multigraph (i.e. list of adjs) to dgl multigraph.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 

@@ -44,7 +44,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Package</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../neuralkg_ind.html">neuralkg_ind package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../neuralkg_ind.html">NeuralKG-ind</a></li>
 </ul>
 
         </div>
@@ -78,7 +78,7 @@
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <div class="viewcode-block" id="link_predict"><a class="viewcode-back" href="../../../neuralkg_ind.eval_task.html#neuralkg_ind.eval_task.link_prediction.link_predict">[docs]</a><span class="k">def</span> <span class="nf">link_predict</span><span class="p">(</span><span class="n">batch</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">prediction</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">,</span> <span class="n">model_name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;The evaluate task is predicting the head entity or tail entity in incomplete triples.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The evaluate task is predicting the head entity or tail entity in incomplete triples.</span>
 <span class="sd">        </span>
 <span class="sd">    Args:</span>
 <span class="sd">        batch: The batch of the triples for validation or test.</span>
@@ -102,7 +102,7 @@
     <span class="k">return</span> <span class="n">ranks</span><span class="o">.</span><span class="n">float</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="ind_predict"><a class="viewcode-back" href="../../../neuralkg_ind.eval_task.html#neuralkg_ind.eval_task.link_prediction.ind_predict">[docs]</a><span class="k">def</span> <span class="nf">ind_predict</span><span class="p">(</span><span class="n">batch</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Getting the ranking of positive samples in the other 50 negative samples.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Getting the ranking of positive samples in the other 50 negative samples.</span>
 <span class="sd">        </span>
 <span class="sd">    Args:</span>
 <span class="sd">        batch: The batch of sample for test.</span>
@@ -128,7 +128,7 @@
 
 
 <div class="viewcode-block" id="head_predict"><a class="viewcode-back" href="../../../neuralkg_ind.eval_task.html#neuralkg_ind.eval_task.link_prediction.head_predict">[docs]</a><span class="k">def</span> <span class="nf">head_predict</span><span class="p">(</span><span class="n">batch</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Getting head entity ranks.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Getting head entity ranks.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        batch: The batch of the triples for validation or test</span>
@@ -145,7 +145,7 @@
 
 
 <div class="viewcode-block" id="tail_predict"><a class="viewcode-back" href="../../../neuralkg_ind.eval_task.html#neuralkg_ind.eval_task.link_prediction.tail_predict">[docs]</a><span class="k">def</span> <span class="nf">tail_predict</span><span class="p">(</span><span class="n">batch</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Getting tail entity ranks.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Getting tail entity ranks.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        batch: The batch of the triples for validation or test</span>
@@ -162,7 +162,7 @@
 
 
 <div class="viewcode-block" id="calc_ranks"><a class="viewcode-back" href="../../../neuralkg_ind.eval_task.html#neuralkg_ind.eval_task.link_prediction.calc_ranks">[docs]</a><span class="k">def</span> <span class="nf">calc_ranks</span><span class="p">(</span><span class="n">idx</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="n">pred_score</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Calculating triples score ranks.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Calculating triples score ranks.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        idx ([type]): The id of the entity to be predicted.</span>
@@ -187,7 +187,7 @@
     <span class="k">return</span> <span class="n">ranks</span></div>
 
 <div class="viewcode-block" id="link_predict_SEGNN"><a class="viewcode-back" href="../../../neuralkg_ind.eval_task.html#neuralkg_ind.eval_task.link_prediction.link_predict_SEGNN">[docs]</a><span class="k">def</span> <span class="nf">link_predict_SEGNN</span><span class="p">(</span><span class="n">batch</span><span class="p">,</span> <span class="n">kg</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">prediction</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;The evaluate task is predicting the head entity or tail entity in incomplete triples.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The evaluate task is predicting the head entity or tail entity in incomplete triples.</span>
 <span class="sd">        </span>
 <span class="sd">    Args:</span>
 <span class="sd">        batch: The batch of the triples for validation or test.</span>
@@ -210,7 +210,7 @@
     <span class="k">return</span> <span class="n">ranks</span><span class="o">.</span><span class="n">float</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="head_predict_SEGNN"><a class="viewcode-back" href="../../../neuralkg_ind.eval_task.html#neuralkg_ind.eval_task.link_prediction.head_predict_SEGNN">[docs]</a><span class="k">def</span> <span class="nf">head_predict_SEGNN</span><span class="p">(</span><span class="n">batch</span><span class="p">,</span> <span class="n">ent_emb</span><span class="p">,</span> <span class="n">rel_emb</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Getting head entity ranks.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Getting head entity ranks.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        batch: The batch of the triples for validation or test</span>
@@ -225,13 +225,13 @@
     <span class="n">rel_idx</span> <span class="o">=</span> <span class="p">[</span><span class="n">pos_triple</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="mi">11</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pos_triple</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]))]</span>
     <span class="n">rel_idx</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">rel_idx</span><span class="p">)</span>
     <span class="n">filter_head</span> <span class="o">=</span> <span class="n">batch</span><span class="p">[</span><span class="s2">&quot;filter_head&quot;</span><span class="p">]</span>
-    <span class="n">pred_score</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predictor</span><span class="o">.</span><span class="n">score_func</span><span class="p">(</span><span class="n">ent_emb</span><span class="p">[</span><span class="n">tail_idx</span><span class="p">],</span> <span class="n">rel_emb</span><span class="p">[</span><span class="n">rel_idx</span><span class="p">],</span> <span class="n">ent_emb</span><span class="p">)</span>
+    <span class="n">pred_score</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predictor</span><span class="o">.</span><span class="n">score_func</span><span class="p">(</span><span class="n">ent_emb</span><span class="p">[</span><span class="n">tail_idx</span><span class="p">],</span> <span class="n">rel_emb</span><span class="p">[</span><span class="n">rel_idx</span><span class="p">],</span> <span class="n">model</span><span class="o">.</span><span class="n">concat</span><span class="p">,</span> <span class="n">ent_emb</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">calc_ranks_SEGNN</span><span class="p">(</span><span class="n">head_idx</span><span class="p">,</span> <span class="n">filter_head</span><span class="p">,</span> <span class="n">pred_score</span><span class="p">)</span></div>
 
 
 
 <div class="viewcode-block" id="tail_predict_SEGNN"><a class="viewcode-back" href="../../../neuralkg_ind.eval_task.html#neuralkg_ind.eval_task.link_prediction.tail_predict_SEGNN">[docs]</a><span class="k">def</span> <span class="nf">tail_predict_SEGNN</span><span class="p">(</span><span class="n">batch</span><span class="p">,</span> <span class="n">ent_emb</span><span class="p">,</span> <span class="n">rel_emb</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Getting tail entity ranks.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Getting tail entity ranks.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        batch: The batch of the triples for validation or test</span>
@@ -245,12 +245,12 @@
     <span class="n">rel_idx</span> <span class="o">=</span> <span class="n">pos_triple</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
     <span class="n">tail_idx</span> <span class="o">=</span> <span class="n">pos_triple</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]</span>
     <span class="n">filter_tail</span> <span class="o">=</span> <span class="n">batch</span><span class="p">[</span><span class="s2">&quot;filter_tail&quot;</span><span class="p">]</span>
-    <span class="n">pred_score</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predictor</span><span class="o">.</span><span class="n">score_func</span><span class="p">(</span><span class="n">ent_emb</span><span class="p">[</span><span class="n">head_idx</span><span class="p">],</span> <span class="n">rel_emb</span><span class="p">[</span><span class="n">rel_idx</span><span class="p">],</span> <span class="n">ent_emb</span><span class="p">)</span>
+    <span class="n">pred_score</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predictor</span><span class="o">.</span><span class="n">score_func</span><span class="p">(</span><span class="n">ent_emb</span><span class="p">[</span><span class="n">head_idx</span><span class="p">],</span> <span class="n">rel_emb</span><span class="p">[</span><span class="n">rel_idx</span><span class="p">],</span> <span class="n">model</span><span class="o">.</span><span class="n">concat</span><span class="p">,</span> <span class="n">ent_emb</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">calc_ranks_SEGNN</span><span class="p">(</span><span class="n">tail_idx</span><span class="p">,</span> <span class="n">filter_tail</span><span class="p">,</span> <span class="n">pred_score</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="calc_ranks_SEGNN"><a class="viewcode-back" href="../../../neuralkg_ind.eval_task.html#neuralkg_ind.eval_task.link_prediction.calc_ranks_SEGNN">[docs]</a><span class="k">def</span> <span class="nf">calc_ranks_SEGNN</span><span class="p">(</span><span class="n">idx</span><span class="p">,</span> <span class="n">filter_label</span><span class="p">,</span> <span class="n">pred_score</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Calculating triples score ranks.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Calculating triples score ranks.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        idx ([type]): The id of the entity to be predicted.</span>

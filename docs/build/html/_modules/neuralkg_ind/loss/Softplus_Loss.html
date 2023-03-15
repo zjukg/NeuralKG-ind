@@ -44,7 +44,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Package</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../neuralkg_ind.html">neuralkg_ind package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../neuralkg_ind.html">NeuralKG-ind</a></li>
 </ul>
 
         </div>
@@ -78,7 +78,7 @@
 <span class="kn">from</span> <span class="nn">IPython</span> <span class="kn">import</span> <span class="n">embed</span>
 
 <div class="viewcode-block" id="Softplus_Loss"><a class="viewcode-back" href="../../../neuralkg_ind.loss.html#neuralkg_ind.loss.Softplus_Loss.Softplus_Loss">[docs]</a><span class="k">class</span> <span class="nc">Softplus_Loss</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;softplus loss. </span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;softplus loss. </span>
 <span class="sd">    Attributes:</span>
 <span class="sd">        args: Some pre-set parameters, etc. </span>
 <span class="sd">        model: The KG model for training.</span>
@@ -90,7 +90,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">model</span>
 
 <div class="viewcode-block" id="Softplus_Loss.forward"><a class="viewcode-back" href="../../../neuralkg_ind.loss.html#neuralkg_ind.loss.Softplus_Loss.Softplus_Loss.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pos_score</span><span class="p">,</span> <span class="n">neg_score</span><span class="p">,</span> <span class="n">subsampling_weight</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Negative sampling loss Softplus_Loss. In math:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Negative sampling loss Softplus_Loss. In math:</span>
 <span class="sd">        </span>
 <span class="sd">        \begin{aligned}</span>
 <span class="sd">            L(\boldsymbol{Q}, \boldsymbol{W})=&amp; \sum_{r(h, t) \in \Omega \cup \Omega^{-}} \log \left(1+\exp \left(-Y_{h r t} \phi(h, r, t)\right)\right) \\</span>

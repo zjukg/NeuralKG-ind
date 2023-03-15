@@ -44,7 +44,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Package</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../../neuralkg_ind.html">neuralkg_ind package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../neuralkg_ind.html">NeuralKG-ind</a></li>
 </ul>
 
         </div>
@@ -81,7 +81,7 @@
 
 
 <div class="viewcode-block" id="SimplE"><a class="viewcode-back" href="../../../../kgemodel.html#neuralkg_ind.model.KGEModel.SimplE.SimplE">[docs]</a><span class="k">class</span> <span class="nc">SimplE</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;`SimplE Embedding for Link Prediction in Knowledge Graphs`_ (SimpleE), which presents a simple enhancement of CP (which we call SimplE) to allow the two embeddings of each entity to be learned dependently.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;`SimplE Embedding for Link Prediction in Knowledge Graphs`_ (SimpleE), which presents a simple enhancement of CP (which we call SimplE) to allow the two embeddings of each entity to be learned dependently.</span>
 
 <span class="sd">    Attributes:</span>
 <span class="sd">        args: Model configuration parameters.</span>
@@ -103,7 +103,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">init_emb</span><span class="p">()</span>
 
 <div class="viewcode-block" id="SimplE.init_emb"><a class="viewcode-back" href="../../../../kgemodel.html#neuralkg_ind.model.KGEModel.SimplE.SimplE.init_emb">[docs]</a>    <span class="k">def</span> <span class="nf">init_emb</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Initialize the entity and relation embeddings in the form of a uniform distribution.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize the entity and relation embeddings in the form of a uniform distribution.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ent_h_emb</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Embedding</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">num_ent</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">emb_dim</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ent_t_emb</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Embedding</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">num_ent</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">emb_dim</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">rel_emb</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Embedding</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">num_rel</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">emb_dim</span><span class="p">)</span>
@@ -115,7 +115,7 @@
         <span class="n">nn</span><span class="o">.</span><span class="n">init</span><span class="o">.</span><span class="n">uniform_</span><span class="p">(</span><span class="n">tensor</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">rel_inv_emb</span><span class="o">.</span><span class="n">weight</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">a</span><span class="o">=-</span><span class="n">sqrt_size</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="n">sqrt_size</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="SimplE.score_func"><a class="viewcode-back" href="../../../../kgemodel.html#neuralkg_ind.model.KGEModel.SimplE.SimplE.score_func">[docs]</a>    <span class="k">def</span> <span class="nf">score_func</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hh_emb</span><span class="p">,</span> <span class="n">rel_emb</span><span class="p">,</span> <span class="n">tt_emb</span><span class="p">,</span> <span class="n">ht_emb</span><span class="p">,</span> <span class="n">rel_inv_emb</span><span class="p">,</span> <span class="n">th_emb</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Calculating the score of triples.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Calculating the score of triples.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            hh_emb: The head entity embedding on embedding h.</span>
@@ -141,7 +141,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">rel_inv_emb</span><span class="o">.</span><span class="n">weight</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">p</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span></div>
     
 <div class="viewcode-block" id="SimplE.forward"><a class="viewcode-back" href="../../../../kgemodel.html#neuralkg_ind.model.KGEModel.SimplE.SimplE.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">triples</span><span class="p">,</span> <span class="n">negs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;single&#39;</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;The functions used in the training phase</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The functions used in the training phase</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            triples: The triples ids, as (h, r, t), shape:[batch_size, 3].</span>
@@ -155,7 +155,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">score_func</span><span class="p">(</span><span class="n">hh_emb</span><span class="p">,</span> <span class="n">rel_emb</span><span class="p">,</span> <span class="n">tt_emb</span><span class="p">,</span> <span class="n">ht_emb</span><span class="p">,</span> <span class="n">rel_inv_emb</span><span class="p">,</span> <span class="n">th_emb</span><span class="p">)</span></div>
     
 <div class="viewcode-block" id="SimplE.get_score"><a class="viewcode-back" href="../../../../kgemodel.html#neuralkg_ind.model.KGEModel.SimplE.SimplE.get_score">[docs]</a>    <span class="k">def</span> <span class="nf">get_score</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">batch</span><span class="p">,</span> <span class="n">mode</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;The functions used in the testing phase</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The functions used in the testing phase</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            batch: A batch of data.</span>

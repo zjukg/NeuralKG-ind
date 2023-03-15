@@ -19,7 +19,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Eval_Task" href="neuralkg_ind.eval_task.html" />
-    <link rel="prev" title="neuralkg_ind package" href="neuralkg_ind.html" /> 
+    <link rel="prev" title="NeuralKG-ind" href="neuralkg_ind.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -47,24 +47,77 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Package</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="neuralkg_ind.html">neuralkg_ind package</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="neuralkg_ind.html#subpackages">Subpackages</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Data</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#module-neuralkg_ind.data.DataPreprocess">DataPreprocess</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-neuralkg_ind.data.Grounding">Grounding</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-neuralkg_ind.data.KGDataModule">KGDataModule</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-neuralkg_ind.data.RuleDataLoader">RuleDataLoader</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-neuralkg_ind.data.Sampler">Sampler</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-neuralkg_ind.data.base_data_module">base_data_module</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="neuralkg_ind.html">NeuralKG-ind</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-neuralkg_ind.data.DataPreprocess">DataPreprocess</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.data.DataPreprocess.KGData"><code class="docutils literal notranslate"><span class="pre">KGData</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.data.DataPreprocess.GRData"><code class="docutils literal notranslate"><span class="pre">GRData</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.data.DataPreprocess.MetaTrainGRData"><code class="docutils literal notranslate"><span class="pre">MetaTrainGRData</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.data.DataPreprocess.MetaValidGRData"><code class="docutils literal notranslate"><span class="pre">MetaValidGRData</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.data.DataPreprocess.KGEEvalData"><code class="docutils literal notranslate"><span class="pre">KGEEvalData</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.data.DataPreprocess.BaseSampler"><code class="docutils literal notranslate"><span class="pre">BaseSampler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.data.DataPreprocess.RevSampler"><code class="docutils literal notranslate"><span class="pre">RevSampler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.data.DataPreprocess.BaseGraph"><code class="docutils literal notranslate"><span class="pre">BaseGraph</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.data.DataPreprocess.BaseMeta"><code class="docutils literal notranslate"><span class="pre">BaseMeta</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="neuralkg_ind.eval_task.html">Eval_Task</a></li>
-<li class="toctree-l3"><a class="reference internal" href="neuralkg_ind.lit_model.html">Lit_Model</a></li>
-<li class="toctree-l3"><a class="reference internal" href="neuralkg_ind.loss.html">loss</a></li>
-<li class="toctree-l3"><a class="reference internal" href="neuralkg_ind.model.html">Model</a></li>
-<li class="toctree-l3"><a class="reference internal" href="neuralkg_ind.utils.html">Utils</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-neuralkg_ind.data.Grounding">Grounding</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.data.Grounding.GroundAllRules"><code class="docutils literal notranslate"><span class="pre">GroundAllRules</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#module-neuralkg_ind.data.KGDataModule">KGDataModule</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.data.KGDataModule.KGDataModule"><code class="docutils literal notranslate"><span class="pre">KGDataModule</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-neuralkg_ind.data.RuleDataLoader">RuleDataLoader</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.data.RuleDataLoader.RuleDataset"><code class="docutils literal notranslate"><span class="pre">RuleDataset</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.data.RuleDataLoader.RuleDataLoader"><code class="docutils literal notranslate"><span class="pre">RuleDataLoader</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-neuralkg_ind.data.Sampler">Sampler</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.data.Sampler.SubSampler"><code class="docutils literal notranslate"><span class="pre">SubSampler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.data.Sampler.RMPISampler"><code class="docutils literal notranslate"><span class="pre">RMPISampler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.data.Sampler.UniSampler"><code class="docutils literal notranslate"><span class="pre">UniSampler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.data.Sampler.BernSampler"><code class="docutils literal notranslate"><span class="pre">BernSampler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.data.Sampler.AdvSampler"><code class="docutils literal notranslate"><span class="pre">AdvSampler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.data.Sampler.AllSampler"><code class="docutils literal notranslate"><span class="pre">AllSampler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.data.Sampler.CrossESampler"><code class="docutils literal notranslate"><span class="pre">CrossESampler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.data.Sampler.ConvSampler"><code class="docutils literal notranslate"><span class="pre">ConvSampler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.data.Sampler.XTransESampler"><code class="docutils literal notranslate"><span class="pre">XTransESampler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.data.Sampler.GraphSampler"><code class="docutils literal notranslate"><span class="pre">GraphSampler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.data.Sampler.KBATSampler"><code class="docutils literal notranslate"><span class="pre">KBATSampler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.data.Sampler.CompGCNSampler"><code class="docutils literal notranslate"><span class="pre">CompGCNSampler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.data.Sampler.TestSampler"><code class="docutils literal notranslate"><span class="pre">TestSampler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.data.Sampler.ValidSampler"><code class="docutils literal notranslate"><span class="pre">ValidSampler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.data.Sampler.ValidRMPISampler"><code class="docutils literal notranslate"><span class="pre">ValidRMPISampler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.data.Sampler.TestSampler_hit"><code class="docutils literal notranslate"><span class="pre">TestSampler_hit</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.data.Sampler.TestRMPISampler_hit"><code class="docutils literal notranslate"><span class="pre">TestRMPISampler_hit</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.data.Sampler.TestSampler_auc"><code class="docutils literal notranslate"><span class="pre">TestSampler_auc</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.data.Sampler.TestRMPISampler_auc"><code class="docutils literal notranslate"><span class="pre">TestRMPISampler_auc</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.data.Sampler.MetaSampler"><code class="docutils literal notranslate"><span class="pre">MetaSampler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.data.Sampler.ValidMetaSampler"><code class="docutils literal notranslate"><span class="pre">ValidMetaSampler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.data.Sampler.TestMetaSampler_hit"><code class="docutils literal notranslate"><span class="pre">TestMetaSampler_hit</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.data.Sampler.TestMetaSampler_auc"><code class="docutils literal notranslate"><span class="pre">TestMetaSampler_auc</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.data.Sampler.GraphTestSampler"><code class="docutils literal notranslate"><span class="pre">GraphTestSampler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.data.Sampler.CompGCNTestSampler"><code class="docutils literal notranslate"><span class="pre">CompGCNTestSampler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.data.Sampler.SEGNNTrainProcess"><code class="docutils literal notranslate"><span class="pre">SEGNNTrainProcess</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.data.Sampler.SEGNNTrainSampler"><code class="docutils literal notranslate"><span class="pre">SEGNNTrainSampler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.data.Sampler.SEGNNTestSampler"><code class="docutils literal notranslate"><span class="pre">SEGNNTestSampler</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.data.Sampler.KGDataset"><code class="docutils literal notranslate"><span class="pre">KGDataset</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-neuralkg_ind.data.base_data_module">base_data_module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.data.base_data_module.Config"><code class="docutils literal notranslate"><span class="pre">Config</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.data.base_data_module.BaseDataModule"><code class="docutils literal notranslate"><span class="pre">BaseDataModule</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="neuralkg_ind.eval_task.html">Eval_Task</a></li>
+<li class="toctree-l2"><a class="reference internal" href="neuralkg_ind.lit_model.html">Lit_Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="neuralkg_ind.loss.html">loss</a></li>
+<li class="toctree-l2"><a class="reference internal" href="neuralkg_ind.model.html">Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="neuralkg_ind.utils.html">Utils</a></li>
 </ul>
 </li>
 </ul>
@@ -83,7 +136,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="neuralkg_ind.html">neuralkg_ind package</a> &raquo;</li>
+          <li><a href="neuralkg_ind.html">NeuralKG-ind</a> &raquo;</li>
       <li>Data</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/zjukg/NeuralKG_ind/blob/main/docs/source/neuralkg_ind.data.rst" class="fa fa-github"> Edit on GitHub</a>
@@ -3062,7 +3115,7 @@ will have an argument <code class="docutils literal notranslate"><span class="pr
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="neuralkg_ind.html" class="btn btn-neutral float-left" title="neuralkg_ind package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="neuralkg_ind.html" class="btn btn-neutral float-left" title="NeuralKG-ind" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="neuralkg_ind.eval_task.html" class="btn btn-neutral float-right" title="Eval_Task" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

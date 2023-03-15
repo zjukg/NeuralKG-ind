@@ -44,7 +44,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Package</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../../neuralkg_ind.html">neuralkg_ind package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../neuralkg_ind.html">NeuralKG-ind</a></li>
 </ul>
 
         </div>
@@ -81,7 +81,7 @@
 <span class="kn">from</span> <span class="nn">neuralkg_ind.utils.tools</span> <span class="kn">import</span> <span class="o">*</span>
 
 <div class="viewcode-block" id="Grail"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.Grail.Grail">[docs]</a><span class="k">class</span> <span class="nc">Grail</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;`Inductive Relation Prediction by Subgraph Reasoning`_ (Grail), which reasons over local subgraph structures.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;`Inductive Relation Prediction by Subgraph Reasoning`_ (Grail), which reasons over local subgraph structures.</span>
 
 <span class="sd">    Attributes:</span>
 <span class="sd">        args: Model configuration parameters.</span>
@@ -105,7 +105,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">fc_layer</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">num_layers</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">emb_dim</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">rel_emb_dim</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
 <div class="viewcode-block" id="Grail.forward"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.Grail.Grail.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;calculating subgraphs score.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;calculating subgraphs score.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            data: Tuple of subgraphs and relation labels.</span>
@@ -137,7 +137,7 @@
         <span class="k">return</span> <span class="n">output</span></div></div>
 
 <div class="viewcode-block" id="RGCN"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.Grail.RGCN">[docs]</a><span class="k">class</span> <span class="nc">RGCN</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;RGCN model</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;RGCN model</span>
 
 <span class="sd">    Attributes:</span>
 <span class="sd">        args: Model configuration parameters.</span>
@@ -165,7 +165,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">build_model</span><span class="p">()</span>
 
 <div class="viewcode-block" id="RGCN.init_emb"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.Grail.RGCN.init_emb">[docs]</a>    <span class="k">def</span> <span class="nf">init_emb</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Initialize the relation attention embedding, aggregator and features.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize the relation attention embedding, aggregator and features.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">has_attn</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">attn_rel_emb</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Embedding</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">num_rel</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">attn_rel_emb_dim</span><span class="p">,</span> <span class="n">sparse</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -178,7 +178,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">features</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">inp_dim</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="RGCN.build_hidden_layer"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.Grail.RGCN.build_hidden_layer">[docs]</a>    <span class="k">def</span> <span class="nf">build_hidden_layer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idx</span><span class="p">):</span> 
-        <span class="sd">&quot;&quot;&quot;build hidden layer of RGCN.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;build hidden layer of RGCN.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            idx: The idx of layer.</span>
@@ -193,7 +193,7 @@
                         <span class="n">is_input_layer</span><span class="o">=</span><span class="n">input_flag</span><span class="p">,</span> <span class="n">has_attn</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">has_attn</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="RGCN.forward"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.Grail.RGCN.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">graph</span><span class="p">,</span> <span class="n">rela</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Getting node and relation embedding.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Getting node and relation embedding.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            graph: Subgraph of corresponding triple.</span>
@@ -208,7 +208,7 @@
         <span class="k">return</span> <span class="n">graph</span><span class="o">.</span><span class="n">ndata</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;h&#39;</span><span class="p">),</span> <span class="n">rela</span></div></div>
 
 <div class="viewcode-block" id="RelAttGraphConv"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.Grail.RelAttGraphConv">[docs]</a><span class="k">class</span> <span class="nc">RelAttGraphConv</span><span class="p">(</span><span class="n">RelGraphConv</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Basic layer of RGCN.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Basic layer of RGCN.</span>
 
 <span class="sd">    Attributes:</span>
 <span class="sd">        args: Model configuration parameters.</span>
@@ -262,7 +262,7 @@
         <span class="n">nn</span><span class="o">.</span><span class="n">init</span><span class="o">.</span><span class="n">xavier_uniform_</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">w_comp</span><span class="p">,</span> <span class="n">gain</span><span class="o">=</span><span class="n">nn</span><span class="o">.</span><span class="n">init</span><span class="o">.</span><span class="n">calculate_gain</span><span class="p">(</span><span class="s1">&#39;relu&#39;</span><span class="p">))</span>
 
 <div class="viewcode-block" id="RelAttGraphConv.propagate"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.Grail.RelAttGraphConv.propagate">[docs]</a>    <span class="k">def</span> <span class="nf">propagate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">attn_rel_emb</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Message propagate function.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Message propagate function.</span>
 
 <span class="sd">        Propagate messages and perform calculations according to the graph traversal order.</span>
 
@@ -289,7 +289,7 @@
         <span class="n">g</span><span class="o">.</span><span class="n">update_all</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">aggregator</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="RelAttGraphConv.forward"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.Grail.RelAttGraphConv.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">rel_emb</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">attn_rel_emb</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Update node representation.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Update node representation.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            graph: Subgraph of corresponding triple.</span>

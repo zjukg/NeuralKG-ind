@@ -44,7 +44,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Package</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../../neuralkg_ind.html">neuralkg_ind package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../neuralkg_ind.html">NeuralKG-ind</a></li>
 </ul>
 
         </div>
@@ -80,7 +80,7 @@
 
 
 <div class="viewcode-block" id="TransH"><a class="viewcode-back" href="../../../../kgemodel.html#neuralkg_ind.model.KGEModel.TransH.TransH">[docs]</a><span class="k">class</span> <span class="nc">TransH</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;`Knowledge Graph Embedding by Translating on Hyperplanes`_ (TransH), which apply the translation from head to tail entity in a</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;`Knowledge Graph Embedding by Translating on Hyperplanes`_ (TransH), which apply the translation from head to tail entity in a</span>
 <span class="sd">    relational-specific hyperplane in order to address its inability to model one-to-many, many-to-one, and many-to-many relations.</span>
 
 <span class="sd">    Attributes:</span>
@@ -133,7 +133,7 @@
         <span class="p">)</span></div>
 
 <div class="viewcode-block" id="TransH.score_func"><a class="viewcode-back" href="../../../../kgemodel.html#neuralkg_ind.model.KGEModel.TransH.TransH.score_func">[docs]</a>    <span class="k">def</span> <span class="nf">score_func</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">head_emb</span><span class="p">,</span> <span class="n">relation_emb</span><span class="p">,</span> <span class="n">tail_emb</span><span class="p">,</span> <span class="n">mode</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Calculating the score of triples.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Calculating the score of triples.</span>
 
 <span class="sd">        The formula for calculating the score is :math:`\gamma - \|e&#39;_{h,r} + d_r - e&#39;_{t,r}\|_{p}^2`</span>
 
@@ -158,7 +158,7 @@
         <span class="k">return</span> <span class="n">score</span></div>
 
 <div class="viewcode-block" id="TransH.forward"><a class="viewcode-back" href="../../../../kgemodel.html#neuralkg_ind.model.KGEModel.TransH.TransH.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">triples</span><span class="p">,</span> <span class="n">negs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;single&quot;</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;The functions used in the training phase, same as TransE&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The functions used in the training phase, same as TransE&quot;&quot;&quot;</span>
 
         <span class="n">head_emb</span><span class="p">,</span> <span class="n">relation_emb</span><span class="p">,</span> <span class="n">tail_emb</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tri2emb</span><span class="p">(</span><span class="n">triples</span><span class="p">,</span> <span class="n">negs</span><span class="p">,</span> <span class="n">mode</span><span class="p">)</span>
         <span class="n">norm_vector</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">norm_vector</span><span class="p">(</span><span class="n">triples</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span>
@@ -171,7 +171,7 @@
         <span class="k">return</span> <span class="n">score</span></div>
 
 <div class="viewcode-block" id="TransH.get_score"><a class="viewcode-back" href="../../../../kgemodel.html#neuralkg_ind.model.KGEModel.TransH.TransH.get_score">[docs]</a>    <span class="k">def</span> <span class="nf">get_score</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">batch</span><span class="p">,</span> <span class="n">mode</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;The functions used in the testing phase, same as TransE&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The functions used in the testing phase, same as TransE&quot;&quot;&quot;</span>
 
         <span class="n">triples</span> <span class="o">=</span> <span class="n">batch</span><span class="p">[</span><span class="s2">&quot;positive_sample&quot;</span><span class="p">]</span>
         <span class="n">head_emb</span><span class="p">,</span> <span class="n">relation_emb</span><span class="p">,</span> <span class="n">tail_emb</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tri2emb</span><span class="p">(</span><span class="n">triples</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">)</span>
@@ -184,7 +184,7 @@
         <span class="k">return</span> <span class="n">score</span></div>
 
     <span class="k">def</span> <span class="nf">_transfer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">emb</span><span class="p">,</span> <span class="n">norm_vector</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Projecting entity embeddings onto the relation-specific hyperplane</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Projecting entity embeddings onto the relation-specific hyperplane</span>
 
 <span class="sd">        The formula for Projecting entity embeddings is :math:`e&#39;_{r} = e - w_r^\Top e w_r`</span>
 

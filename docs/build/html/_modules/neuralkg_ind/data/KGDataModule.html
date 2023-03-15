@@ -44,7 +44,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Package</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../neuralkg_ind.html">neuralkg_ind package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../neuralkg_ind.html">NeuralKG-ind</a></li>
 </ul>
 
         </div>
@@ -83,7 +83,7 @@
 
 
 <div class="viewcode-block" id="KGDataModule"><a class="viewcode-back" href="../../../neuralkg_ind.data.html#neuralkg_ind.data.KGDataModule.KGDataModule">[docs]</a><span class="k">class</span> <span class="nc">KGDataModule</span><span class="p">(</span><span class="n">BaseDataModule</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Base DataModule.</span>
 <span class="sd">    Learn more at https://pytorch-lightning.readthedocs.io/en/stable/datamodules.html</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -110,20 +110,20 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">warm_up_steps</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">single_epoch_step</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">warmup_epoch</span><span class="p">)</span>
 
 <div class="viewcode-block" id="KGDataModule.get_data_config"><a class="viewcode-back" href="../../../neuralkg_ind.data.html#neuralkg_ind.data.KGDataModule.KGDataModule.get_data_config">[docs]</a>    <span class="k">def</span> <span class="nf">get_data_config</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Return important settings of the dataset, which will be passed to instantiate models.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Return important settings of the dataset, which will be passed to instantiate models.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="p">{</span>
             <span class="s2">&quot;num_training_steps&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_training_steps</span><span class="p">,</span>
             <span class="s2">&quot;num_labels&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_labels</span><span class="p">,</span>
         <span class="p">}</span></div>
 
 <div class="viewcode-block" id="KGDataModule.prepare_data"><a class="viewcode-back" href="../../../neuralkg_ind.data.html#neuralkg_ind.data.KGDataModule.KGDataModule.prepare_data">[docs]</a>    <span class="k">def</span> <span class="nf">prepare_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Use this method to do things that might write to disk or that need to be done only from a single GPU in distributed settings (so don&#39;t set state `self.x = y`).</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 <div class="viewcode-block" id="KGDataModule.setup"><a class="viewcode-back" href="../../../neuralkg_ind.data.html#neuralkg_ind.data.KGDataModule.KGDataModule.setup">[docs]</a>    <span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stage</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Split into train, val, test, and set dims.</span>
 <span class="sd">        Should assign `torch Dataset` objects to self.data_train, self.data_val, and optionally self.data_test.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -132,7 +132,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">data_test</span>  <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">train_sampler</span><span class="o">.</span><span class="n">get_test</span><span class="p">()</span></div>
 
 <div class="viewcode-block" id="KGDataModule.get_train_bs"><a class="viewcode-back" href="../../../neuralkg_ind.data.html#neuralkg_ind.data.KGDataModule.KGDataModule.get_train_bs">[docs]</a>    <span class="k">def</span> <span class="nf">get_train_bs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Get batch size for training.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get batch size for training.</span>
 
 <span class="sd">        If the num_batches isn`t zero, it will divide data_train by num_batches to get batch size.</span>
 <span class="sd">        And if user don`t give batch size and num_batches=0, it will raise ValueError.</span>
