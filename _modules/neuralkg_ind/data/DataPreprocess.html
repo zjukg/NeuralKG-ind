@@ -44,7 +44,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Package</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../neuralkg_ind.html">neuralkg_ind package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../neuralkg_ind.html">NeuralKG-ind</a></li>
 </ul>
 
         </div>
@@ -87,7 +87,7 @@
 <span class="kn">from</span> <span class="nn">neuralkg_ind.utils</span> <span class="kn">import</span> <span class="n">deserialize</span><span class="p">,</span> <span class="n">deserialize_RMPI</span><span class="p">,</span> <span class="n">ssp_multigraph_to_dgl</span><span class="p">,</span> <span class="n">gen_subgraph_datasets</span><span class="p">,</span> <span class="n">get_indtest_test_dataset_and_train_g</span>
 
 <div class="viewcode-block" id="KGData"><a class="viewcode-back" href="../../../neuralkg_ind.data.html#neuralkg_ind.data.DataPreprocess.KGData">[docs]</a><span class="k">class</span> <span class="nc">KGData</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Data preprocessing of kg data.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Data preprocessing of kg data.</span>
 
 <span class="sd">    Attributes:</span>
 <span class="sd">        args: Some pre-set parameters, such as dataset path, etc. </span>
@@ -137,7 +137,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">count</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">count_frequency</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">train_triples</span><span class="p">)</span>
 
 <div class="viewcode-block" id="KGData.get_id"><a class="viewcode-back" href="../../../neuralkg_ind.data.html#neuralkg_ind.data.DataPreprocess.KGData.get_id">[docs]</a>    <span class="k">def</span> <span class="nf">get_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Getting entity/relation id, and entity/relation number.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Getting entity/relation id, and entity/relation number.</span>
 
 <span class="sd">        Update:</span>
 <span class="sd">            self.ent2id: Entity to id.</span>
@@ -163,7 +163,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">num_rel</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rel2id</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="KGData.get_triples_id"><a class="viewcode-back" href="../../../neuralkg_ind.data.html#neuralkg_ind.data.DataPreprocess.KGData.get_triples_id">[docs]</a>    <span class="k">def</span> <span class="nf">get_triples_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Getting triples id, save in the format of (h, r, t).</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Getting triples id, save in the format of (h, r, t).</span>
 
 <span class="sd">        Update:</span>
 <span class="sd">            self.train_triples: Train dataset triples id.</span>
@@ -232,7 +232,7 @@
         <span class="p">)</span></div>
 
 <div class="viewcode-block" id="KGData.get_hr2t_rt2h_from_train"><a class="viewcode-back" href="../../../neuralkg_ind.data.html#neuralkg_ind.data.DataPreprocess.KGData.get_hr2t_rt2h_from_train">[docs]</a>    <span class="k">def</span> <span class="nf">get_hr2t_rt2h_from_train</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Getting the set of hr2t and rt2h from train dataset, the data type is numpy.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Getting the set of hr2t and rt2h from train dataset, the data type is numpy.</span>
 
 <span class="sd">        Update:</span>
 <span class="sd">            self.hr2t_train: The set of hr2t.</span>
@@ -249,7 +249,7 @@
 
 <div class="viewcode-block" id="KGData.count_frequency"><a class="viewcode-back" href="../../../neuralkg_ind.data.html#neuralkg_ind.data.DataPreprocess.KGData.count_frequency">[docs]</a>    <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">count_frequency</span><span class="p">(</span><span class="n">triples</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">4</span><span class="p">):</span>
-        <span class="sd">&#39;&#39;&#39;Getting frequency of a partial triple like (head, relation) or (relation, tail).</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Getting frequency of a partial triple like (head, relation) or (relation, tail).</span>
 <span class="sd">        </span>
 <span class="sd">        The frequency will be used for subsampling like word2vec.</span>
 <span class="sd">        </span>
@@ -275,7 +275,7 @@
         
 
 <div class="viewcode-block" id="KGData.get_h2rt_t2hr_from_train"><a class="viewcode-back" href="../../../neuralkg_ind.data.html#neuralkg_ind.data.DataPreprocess.KGData.get_h2rt_t2hr_from_train">[docs]</a>    <span class="k">def</span> <span class="nf">get_h2rt_t2hr_from_train</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Getting the set of h2rt and t2hr from train dataset, the data type is numpy.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Getting the set of h2rt and t2hr from train dataset, the data type is numpy.</span>
 
 <span class="sd">        Update:</span>
 <span class="sd">            self.h2rt_train: The set of h2rt.</span>
@@ -290,7 +290,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">t2rh_train</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">t2rh_train</span><span class="p">[</span><span class="n">t</span><span class="p">]))</span></div>
         
 <div class="viewcode-block" id="KGData.get_hr_trian"><a class="viewcode-back" href="../../../neuralkg_ind.data.html#neuralkg_ind.data.DataPreprocess.KGData.get_hr_trian">[docs]</a>    <span class="k">def</span> <span class="nf">get_hr_trian</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&#39;&#39;&#39;Change the generation mode of batch.</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Change the generation mode of batch.</span>
 <span class="sd">        Merging triples which have same head and relation for 1vsN training mode.</span>
 
 <span class="sd">        Returns:</span>
@@ -300,7 +300,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">train_triples</span> <span class="o">=</span> <span class="p">[</span> <span class="p">(</span><span class="n">hr</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="k">for</span> <span class="p">(</span><span class="n">hr</span><span class="p">,</span><span class="n">t</span><span class="p">)</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">hr2t_train</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span></div></div>
 
 <div class="viewcode-block" id="GRData"><a class="viewcode-back" href="../../../neuralkg_ind.data.html#neuralkg_ind.data.DataPreprocess.GRData">[docs]</a><span class="k">class</span> <span class="nc">GRData</span><span class="p">(</span><span class="n">Dataset</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Data preprocessing of subgraph. -- DGL Only</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Data preprocessing of subgraph. -- DGL Only</span>
 
 <span class="sd">    Attributes:</span>
 <span class="sd">        args: Some pre-set parameters, such as dataset path, etc. </span>
@@ -388,7 +388,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="fm">__getitem__</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
-        <span class="sd">&#39;&#39;&#39;Getting the subgraph corresponding to the index and prepare subgraph features. </span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Getting the subgraph corresponding to the index and prepare subgraph features. </span>
 <span class="sd">        </span>
 <span class="sd">        Args:</span>
 <span class="sd">            index: Index of triple, which can obtain corresponding subgraph nodes from lmdb.</span>
@@ -435,7 +435,7 @@
             <span class="k">return</span> <span class="n">subgraph_pos</span><span class="p">,</span> <span class="n">g_label_pos</span><span class="p">,</span> <span class="n">r_label_pos</span><span class="p">,</span> <span class="n">subgraphs_neg</span><span class="p">,</span> <span class="n">g_labels_neg</span><span class="p">,</span> <span class="n">r_labels_neg</span>
 
     <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&#39;&#39;&#39;Getting number of subgraph.</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Getting number of subgraph.</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            num_graphs_pos: number of positive sample subgraph.</span>
@@ -443,7 +443,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_graphs_pos</span>
 
 <div class="viewcode-block" id="GRData.load_data_grail"><a class="viewcode-back" href="../../../neuralkg_ind.data.html#neuralkg_ind.data.DataPreprocess.GRData.load_data_grail">[docs]</a>    <span class="k">def</span> <span class="nf">load_data_grail</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&#39;&#39;&#39;Load train dataset, adj_list, ent2idx, etc.</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Load train dataset, adj_list, ent2idx, etc.</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            adj_list: The collect of head to tail csc_matrix. type: list. </span>
@@ -541,7 +541,7 @@
         <span class="k">return</span> <span class="n">adj_list</span><span class="p">,</span> <span class="n">triplets</span><span class="p">,</span> <span class="n">train_ent2idx</span><span class="p">,</span> <span class="n">train_rel2idx</span><span class="p">,</span> <span class="n">train_idx2ent</span><span class="p">,</span> <span class="n">train_idx2rel</span><span class="p">,</span> <span class="n">h2r</span><span class="p">,</span> <span class="n">m_h2r</span><span class="p">,</span> <span class="n">t2r</span><span class="p">,</span> <span class="n">m_t2r</span></div>
     
 <div class="viewcode-block" id="GRData.load_ind_data_grail"><a class="viewcode-back" href="../../../neuralkg_ind.data.html#neuralkg_ind.data.DataPreprocess.GRData.load_ind_data_grail">[docs]</a>    <span class="k">def</span> <span class="nf">load_ind_data_grail</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&#39;&#39;&#39;Load test dataset, adj_list, ent2idx, etc.</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Load test dataset, adj_list, ent2idx, etc.</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            adj_list: The collect of head to tail csc_matrix. type: list. </span>
@@ -661,7 +661,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__getitem__</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="GRData.prepare_subgraphs"><a class="viewcode-back" href="../../../neuralkg_ind.data.html#neuralkg_ind.data.DataPreprocess.GRData.prepare_subgraphs">[docs]</a>    <span class="k">def</span> <span class="nf">prepare_subgraphs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nodes</span><span class="p">,</span> <span class="n">r_label</span><span class="p">,</span> <span class="n">n_labels</span><span class="p">):</span>
-        <span class="sd">&#39;&#39;&#39;Initialize subgraph nodes and relation characteristics.</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Initialize subgraph nodes and relation characteristics.</span>
 <span class="sd">        </span>
 <span class="sd">        Args:</span>
 <span class="sd">            nodes: The nodes of subgraph.</span>
@@ -705,7 +705,7 @@
         <span class="k">return</span> <span class="n">subgraph</span></div>
 
 <div class="viewcode-block" id="GRData.prepare_features_new"><a class="viewcode-back" href="../../../neuralkg_ind.data.html#neuralkg_ind.data.DataPreprocess.GRData.prepare_features_new">[docs]</a>    <span class="k">def</span> <span class="nf">prepare_features_new</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">subgraph</span><span class="p">,</span> <span class="n">n_labels</span><span class="p">,</span> <span class="n">r_label</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="sd">&#39;&#39;&#39;prepare subgraph node features</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;prepare subgraph node features</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            subgraph: Extract subgraph.</span>
@@ -736,7 +736,7 @@
         <span class="k">return</span> <span class="n">subgraph</span></div></div>
 
 <div class="viewcode-block" id="MetaTrainGRData"><a class="viewcode-back" href="../../../neuralkg_ind.data.html#neuralkg_ind.data.DataPreprocess.MetaTrainGRData">[docs]</a><span class="k">class</span> <span class="nc">MetaTrainGRData</span><span class="p">(</span><span class="n">Dataset</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Data preprocessing of meta train task.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Data preprocessing of meta train task.</span>
 
 <span class="sd">    Attributes:</span>
 <span class="sd">        subgraphs_db: database of train subgraphs.</span>
@@ -750,7 +750,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">num_train_subgraph</span>
 
     <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idx</span><span class="p">):</span>
-        <span class="sd">&#39;&#39;&#39;Getting the train meta task corresponding to the index. </span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Getting the train meta task corresponding to the index. </span>
 <span class="sd">        </span>
 <span class="sd">        Args:</span>
 <span class="sd">            index: Index of train subgraph, which can obtain corresponding task triple from lmdb.</span>
@@ -777,7 +777,7 @@
                <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">que_neg_tail_ent</span><span class="p">)),</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">que_neg_head_ent</span><span class="p">))</span></div>
 
 <div class="viewcode-block" id="MetaValidGRData"><a class="viewcode-back" href="../../../neuralkg_ind.data.html#neuralkg_ind.data.DataPreprocess.MetaValidGRData">[docs]</a><span class="k">class</span> <span class="nc">MetaValidGRData</span><span class="p">(</span><span class="n">Dataset</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Data preprocessing of meta valid task.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Data preprocessing of meta valid task.</span>
 
 <span class="sd">    Attributes:</span>
 <span class="sd">        subgraphs_db: database of valid subgraphs.</span>
@@ -793,7 +793,7 @@
         <span class="k">return</span> <span class="n">num</span>
 
     <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idx</span><span class="p">):</span>
-        <span class="sd">&#39;&#39;&#39;Getting the valid meta task corresponding to the index. </span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Getting the valid meta task corresponding to the index. </span>
 <span class="sd">        </span>
 <span class="sd">        Args:</span>
 <span class="sd">            index: Index of valid subgraph, which can obtain corresponding task triple from lmdb.</span>
@@ -815,7 +815,7 @@
         <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">sup_tri</span><span class="p">),</span> <span class="n">que_dataloader</span></div>
 
 <div class="viewcode-block" id="KGEEvalData"><a class="viewcode-back" href="../../../neuralkg_ind.data.html#neuralkg_ind.data.DataPreprocess.KGEEvalData">[docs]</a><span class="k">class</span> <span class="nc">KGEEvalData</span><span class="p">(</span><span class="n">Dataset</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Data processing for kge evaluate.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Data processing for kge evaluate.</span>
 
 <span class="sd">    Attributes: </span>
 <span class="sd">        triples: Evaluate triples. type: list.</span>
@@ -836,7 +836,7 @@
         <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">triples</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idx</span><span class="p">):</span>
-        <span class="sd">&#39;&#39;&#39;Sample negative candidate entities corresponding to the index. </span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Sample negative candidate entities corresponding to the index. </span>
 <span class="sd">        </span>
 <span class="sd">        Args:</span>
 <span class="sd">            index: Index of triple.</span>
@@ -871,7 +871,7 @@
             <span class="k">return</span> <span class="n">pos_triple</span><span class="p">,</span> <span class="n">tail_cand</span><span class="p">,</span> <span class="n">head_cand</span>
 
 <div class="viewcode-block" id="KGEEvalData.get_label"><a class="viewcode-back" href="../../../neuralkg_ind.data.html#neuralkg_ind.data.DataPreprocess.KGEEvalData.get_label">[docs]</a>    <span class="k">def</span> <span class="nf">get_label</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">true_tail</span><span class="p">,</span> <span class="n">true_head</span><span class="p">):</span>
-        <span class="sd">&#39;&#39;&#39;Filter head and tail entities.</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Filter head and tail entities.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            true_tail: Existing tail entities in dataset.</span>
@@ -898,14 +898,14 @@
         <span class="k">return</span> <span class="n">pos_triple</span><span class="p">,</span> <span class="n">tail_label_or_cand</span><span class="p">,</span> <span class="n">head_label_or_cand</span></div></div>
 
 <div class="viewcode-block" id="BaseSampler"><a class="viewcode-back" href="../../../neuralkg_ind.data.html#neuralkg_ind.data.DataPreprocess.BaseSampler">[docs]</a><span class="k">class</span> <span class="nc">BaseSampler</span><span class="p">(</span><span class="n">KGData</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Traditional random sampling mode.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Traditional random sampling mode.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">args</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">get_hr2t_rt2h_from_train</span><span class="p">()</span>
 
 <div class="viewcode-block" id="BaseSampler.corrupt_head"><a class="viewcode-back" href="../../../neuralkg_ind.data.html#neuralkg_ind.data.DataPreprocess.BaseSampler.corrupt_head">[docs]</a>    <span class="k">def</span> <span class="nf">corrupt_head</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">num_max</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Negative sampling of head entities.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Negative sampling of head entities.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            t: Tail entity in triple.</span>
@@ -923,7 +923,7 @@
         <span class="k">return</span> <span class="n">neg</span></div>
 
 <div class="viewcode-block" id="BaseSampler.corrupt_tail"><a class="viewcode-back" href="../../../neuralkg_ind.data.html#neuralkg_ind.data.DataPreprocess.BaseSampler.corrupt_tail">[docs]</a>    <span class="k">def</span> <span class="nf">corrupt_tail</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">num_max</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Negative sampling of tail entities.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Negative sampling of tail entities.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            h: Head entity in triple.</span>
@@ -941,7 +941,7 @@
         <span class="k">return</span> <span class="n">neg</span></div>
 
 <div class="viewcode-block" id="BaseSampler.head_batch"><a class="viewcode-back" href="../../../neuralkg_ind.data.html#neuralkg_ind.data.DataPreprocess.BaseSampler.head_batch">[docs]</a>    <span class="k">def</span> <span class="nf">head_batch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">neg_size</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Negative sampling of head entities.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Negative sampling of head entities.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            h: Head entity in triple</span>
@@ -961,7 +961,7 @@
         <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span><span class="n">neg_list</span><span class="p">)[:</span><span class="n">neg_size</span><span class="p">]</span></div>
 
 <div class="viewcode-block" id="BaseSampler.tail_batch"><a class="viewcode-back" href="../../../neuralkg_ind.data.html#neuralkg_ind.data.DataPreprocess.BaseSampler.tail_batch">[docs]</a>    <span class="k">def</span> <span class="nf">tail_batch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">neg_size</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Negative sampling of tail entities.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Negative sampling of tail entities.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            h: Head entity in triple</span>
@@ -993,7 +993,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">all_true_triples</span></div></div>
 
 <div class="viewcode-block" id="RevSampler"><a class="viewcode-back" href="../../../neuralkg_ind.data.html#neuralkg_ind.data.DataPreprocess.RevSampler">[docs]</a><span class="k">class</span> <span class="nc">RevSampler</span><span class="p">(</span><span class="n">KGData</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Adding reverse triples in traditional random sampling mode.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Adding reverse triples in traditional random sampling mode.</span>
 
 <span class="sd">    For each triple (h, r, t), generate the reverse triple (t, r`, h).</span>
 <span class="sd">    r` = r + num_rel.</span>
@@ -1011,7 +1011,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">get_hr2t_rt2h_from_train</span><span class="p">()</span>
 
 <div class="viewcode-block" id="RevSampler.add_reverse_relation"><a class="viewcode-back" href="../../../neuralkg_ind.data.html#neuralkg_ind.data.DataPreprocess.RevSampler.add_reverse_relation">[docs]</a>    <span class="k">def</span> <span class="nf">add_reverse_relation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Getting entity/relation/reverse relation id, and entity/relation number.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Getting entity/relation/reverse relation id, and entity/relation number.</span>
 
 <span class="sd">        Update:</span>
 <span class="sd">            self.ent2id: Entity id.</span>
@@ -1029,7 +1029,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">num_rel</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rel2id</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="RevSampler.add_reverse_triples"><a class="viewcode-back" href="../../../neuralkg_ind.data.html#neuralkg_ind.data.DataPreprocess.RevSampler.add_reverse_triples">[docs]</a>    <span class="k">def</span> <span class="nf">add_reverse_triples</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Generate reverse triples (t, r`, h).</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Generate reverse triples (t, r`, h).</span>
 
 <span class="sd">        Update:</span>
 <span class="sd">            self.train_triples: Triples for training.</span>
@@ -1076,7 +1076,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">all_true_triples</span>    </div>
     
 <div class="viewcode-block" id="RevSampler.corrupt_head"><a class="viewcode-back" href="../../../neuralkg_ind.data.html#neuralkg_ind.data.DataPreprocess.RevSampler.corrupt_head">[docs]</a>    <span class="k">def</span> <span class="nf">corrupt_head</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">num_max</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Negative sampling of head entities.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Negative sampling of head entities.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            t: Tail entity in triple.</span>
@@ -1094,7 +1094,7 @@
         <span class="k">return</span> <span class="n">neg</span></div>
 
 <div class="viewcode-block" id="RevSampler.corrupt_tail"><a class="viewcode-back" href="../../../neuralkg_ind.data.html#neuralkg_ind.data.DataPreprocess.RevSampler.corrupt_tail">[docs]</a>    <span class="k">def</span> <span class="nf">corrupt_tail</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">num_max</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Negative sampling of tail entities.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Negative sampling of tail entities.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            h: Head entity in triple.</span>
@@ -1112,7 +1112,7 @@
         <span class="k">return</span> <span class="n">neg</span></div>
 
 <div class="viewcode-block" id="RevSampler.head_batch"><a class="viewcode-back" href="../../../neuralkg_ind.data.html#neuralkg_ind.data.DataPreprocess.RevSampler.head_batch">[docs]</a>    <span class="k">def</span> <span class="nf">head_batch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">neg_size</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Negative sampling of head entities.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Negative sampling of head entities.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            h: Head entity in triple</span>
@@ -1132,7 +1132,7 @@
         <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span><span class="n">neg_list</span><span class="p">)[:</span><span class="n">neg_size</span><span class="p">]</span></div>
 
 <div class="viewcode-block" id="RevSampler.tail_batch"><a class="viewcode-back" href="../../../neuralkg_ind.data.html#neuralkg_ind.data.DataPreprocess.RevSampler.tail_batch">[docs]</a>    <span class="k">def</span> <span class="nf">tail_batch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">neg_size</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Negative sampling of tail entities.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Negative sampling of tail entities.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            h: Head entity in triple</span>
@@ -1152,7 +1152,7 @@
         <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span><span class="n">neg_list</span><span class="p">)[:</span><span class="n">neg_size</span><span class="p">]</span></div></div>
 
 <div class="viewcode-block" id="BaseGraph"><a class="viewcode-back" href="../../../neuralkg_ind.data.html#neuralkg_ind.data.DataPreprocess.BaseGraph">[docs]</a><span class="k">class</span> <span class="nc">BaseGraph</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;Base subgraph class</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Base subgraph class</span>
 
 <span class="sd">    collect train, valid, test dataset for inductive.</span>
 <span class="sd">    &#39;&#39;&#39;</span>
@@ -1191,7 +1191,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_triples</span></div>
     
 <div class="viewcode-block" id="BaseGraph.generate_ind_test"><a class="viewcode-back" href="../../../neuralkg_ind.data.html#neuralkg_ind.data.DataPreprocess.BaseGraph.generate_ind_test">[docs]</a>    <span class="k">def</span> <span class="nf">generate_ind_test</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&#39;&#39;&#39;generate inductive test triples.</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;generate inductive test triples.</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            neg_triplets: Negative triplets.</span>
@@ -1207,7 +1207,7 @@
         <span class="k">return</span> <span class="n">neg_triplets</span></div>
 
 <div class="viewcode-block" id="BaseGraph.load_data_grail_ind"><a class="viewcode-back" href="../../../neuralkg_ind.data.html#neuralkg_ind.data.DataPreprocess.BaseGraph.load_data_grail_ind">[docs]</a>    <span class="k">def</span> <span class="nf">load_data_grail_ind</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&#39;&#39;&#39;Load train dataset, adj_list, ent2idx, etc.</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Load train dataset, adj_list, ent2idx, etc.</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            adj_list: The collect of head to tail csc_matrix.</span>
@@ -1295,7 +1295,7 @@
         <span class="k">return</span> <span class="n">adj_list</span><span class="p">,</span> <span class="n">dgl_adj_list</span><span class="p">,</span> <span class="n">triplets</span><span class="p">,</span> <span class="n">m_h2r</span><span class="p">,</span> <span class="n">m_t2r</span></div>
 
 <div class="viewcode-block" id="BaseGraph.get_neg_samples_replacing_head_tail"><a class="viewcode-back" href="../../../neuralkg_ind.data.html#neuralkg_ind.data.DataPreprocess.BaseGraph.get_neg_samples_replacing_head_tail">[docs]</a>    <span class="k">def</span> <span class="nf">get_neg_samples_replacing_head_tail</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">test_links</span><span class="p">,</span> <span class="n">adj_list</span><span class="p">,</span> <span class="n">num_samples</span><span class="o">=</span><span class="mi">50</span><span class="p">):</span>
-        <span class="sd">&#39;&#39;&#39;Sample negative triplets by relacing head or tail.</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Sample negative triplets by relacing head or tail.</span>
 <span class="sd">        </span>
 <span class="sd">        Args:</span>
 <span class="sd">            test_links: test-test triplets.</span>
@@ -1336,7 +1336,7 @@
         <span class="k">return</span> <span class="n">neg_triplets</span></div></div>
 
 <div class="viewcode-block" id="BaseMeta"><a class="viewcode-back" href="../../../neuralkg_ind.data.html#neuralkg_ind.data.DataPreprocess.BaseMeta">[docs]</a><span class="k">class</span> <span class="nc">BaseMeta</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Base meta class</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Base meta class</span>
 
 <span class="sd">    collect train, valid, test dataset for meta task.</span>
 <span class="sd">    &quot;&quot;&quot;</span>

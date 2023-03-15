@@ -46,16 +46,59 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Package</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="neuralkg_ind.html">neuralkg_ind package</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="neuralkg_ind.html#subpackages">Subpackages</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="neuralkg_ind.data.html">Data</a></li>
-<li class="toctree-l3"><a class="reference internal" href="neuralkg_ind.eval_task.html">Eval_Task</a></li>
-<li class="toctree-l3"><a class="reference internal" href="neuralkg_ind.lit_model.html">Lit_Model</a></li>
-<li class="toctree-l3"><a class="reference internal" href="neuralkg_ind.loss.html">loss</a></li>
-<li class="toctree-l3"><a class="reference internal" href="neuralkg_ind.model.html">Model</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Utils</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#module-neuralkg_ind.utils.setup_parser">setup_parser</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-neuralkg_ind.utils.tools">tools</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="neuralkg_ind.html">NeuralKG-ind</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="neuralkg_ind.data.html">Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="neuralkg_ind.eval_task.html">Eval_Task</a></li>
+<li class="toctree-l2"><a class="reference internal" href="neuralkg_ind.lit_model.html">Lit_Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="neuralkg_ind.loss.html">loss</a></li>
+<li class="toctree-l2"><a class="reference internal" href="neuralkg_ind.model.html">Model</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Utils</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-neuralkg_ind.utils.setup_parser">setup_parser</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.utils.setup_parser.setup_parser"><code class="docutils literal notranslate"><span class="pre">setup_parser()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-neuralkg_ind.utils.tools">tools</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.utils.tools.import_class"><code class="docutils literal notranslate"><span class="pre">import_class()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.utils.tools.save_config"><code class="docutils literal notranslate"><span class="pre">save_config()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.utils.tools.load_config"><code class="docutils literal notranslate"><span class="pre">load_config()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.utils.tools.get_param"><code class="docutils literal notranslate"><span class="pre">get_param()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.utils.tools.deserialize"><code class="docutils literal notranslate"><span class="pre">deserialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.utils.tools.deserialize_RMPI"><code class="docutils literal notranslate"><span class="pre">deserialize_RMPI()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.utils.tools.set_logger"><code class="docutils literal notranslate"><span class="pre">set_logger()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.utils.tools.log_metrics"><code class="docutils literal notranslate"><span class="pre">log_metrics()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.utils.tools.log_step_metrics"><code class="docutils literal notranslate"><span class="pre">log_step_metrics()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.utils.tools.override_config"><code class="docutils literal notranslate"><span class="pre">override_config()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.utils.tools.reidx_withr_ande"><code class="docutils literal notranslate"><span class="pre">reidx_withr_ande()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.utils.tools.reidx"><code class="docutils literal notranslate"><span class="pre">reidx()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.utils.tools.reidx_withr"><code class="docutils literal notranslate"><span class="pre">reidx_withr()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.utils.tools.data2pkl"><code class="docutils literal notranslate"><span class="pre">data2pkl()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.utils.tools.gen_subgraph_datasets"><code class="docutils literal notranslate"><span class="pre">gen_subgraph_datasets()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.utils.tools.load_ind_data_grail"><code class="docutils literal notranslate"><span class="pre">load_ind_data_grail()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.utils.tools.load_data_grail"><code class="docutils literal notranslate"><span class="pre">load_data_grail()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.utils.tools.get_average_subgraph_size"><code class="docutils literal notranslate"><span class="pre">get_average_subgraph_size()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.utils.tools.serialize"><code class="docutils literal notranslate"><span class="pre">serialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.utils.tools.sample_neg"><code class="docutils literal notranslate"><span class="pre">sample_neg()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.utils.tools.get_edge_count"><code class="docutils literal notranslate"><span class="pre">get_edge_count()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.utils.tools.intialize_worker"><code class="docutils literal notranslate"><span class="pre">intialize_worker()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.utils.tools.extract_save_subgraph"><code class="docutils literal notranslate"><span class="pre">extract_save_subgraph()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.utils.tools.links2subgraphs"><code class="docutils literal notranslate"><span class="pre">links2subgraphs()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.utils.tools.subgraph_extraction_labeling"><code class="docutils literal notranslate"><span class="pre">subgraph_extraction_labeling()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.utils.tools.node_label"><code class="docutils literal notranslate"><span class="pre">node_label()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.utils.tools.remove_nodes"><code class="docutils literal notranslate"><span class="pre">remove_nodes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.utils.tools.get_neighbor_nodes"><code class="docutils literal notranslate"><span class="pre">get_neighbor_nodes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.utils.tools.incidence_matrix"><code class="docutils literal notranslate"><span class="pre">incidence_matrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.utils.tools.bfs_relational"><code class="docutils literal notranslate"><span class="pre">bfs_relational()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.utils.tools.get_neighbors"><code class="docutils literal notranslate"><span class="pre">get_neighbors()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.utils.tools.sp_row_vec_from_idx_list"><code class="docutils literal notranslate"><span class="pre">sp_row_vec_from_idx_list()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.utils.tools.ssp_multigraph_to_dgl"><code class="docutils literal notranslate"><span class="pre">ssp_multigraph_to_dgl()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.utils.tools.gen_meta_subgraph_datasets"><code class="docutils literal notranslate"><span class="pre">gen_meta_subgraph_datasets()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.utils.tools.sample_one_subgraph"><code class="docutils literal notranslate"><span class="pre">sample_one_subgraph()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.utils.tools.get_average_meta_subgraph_size"><code class="docutils literal notranslate"><span class="pre">get_average_meta_subgraph_size()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.utils.tools.get_g"><code class="docutils literal notranslate"><span class="pre">get_g()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.utils.tools.get_g_bidir"><code class="docutils literal notranslate"><span class="pre">get_g_bidir()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.utils.tools.get_hr2t_rt2h"><code class="docutils literal notranslate"><span class="pre">get_hr2t_rt2h()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.utils.tools.get_hr2t_rt2h_sup_que"><code class="docutils literal notranslate"><span class="pre">get_hr2t_rt2h_sup_que()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#neuralkg_ind.utils.tools.get_indtest_test_dataset_and_train_g"><code class="docutils literal notranslate"><span class="pre">get_indtest_test_dataset_and_train_g()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -78,7 +121,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="neuralkg_ind.html">neuralkg_ind package</a> &raquo;</li>
+          <li><a href="neuralkg_ind.html">NeuralKG-ind</a> &raquo;</li>
       <li>Utils</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/zjukg/NeuralKG_ind/blob/main/docs/source/neuralkg_ind.utils.rst" class="fa fa-github"> Edit on GitHub</a>

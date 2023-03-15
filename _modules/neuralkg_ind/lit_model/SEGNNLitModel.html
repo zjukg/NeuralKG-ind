@@ -44,7 +44,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Package</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../neuralkg_ind.html">neuralkg_ind package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../neuralkg_ind.html">NeuralKG-ind</a></li>
 </ul>
 
         </div>
@@ -142,11 +142,11 @@
         <span class="n">kg</span> <span class="o">=</span> <span class="n">dgl</span><span class="o">.</span><span class="n">graph</span><span class="p">((</span><span class="n">src_list</span><span class="p">,</span> <span class="n">dst_list</span><span class="p">),</span> <span class="n">num_nodes</span><span class="o">=</span><span class="n">n_ent</span><span class="p">)</span>
         <span class="n">kg</span><span class="o">.</span><span class="n">edata</span><span class="p">[</span><span class="s1">&#39;rel_id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">rel_list</span>
         <span class="k">return</span> <span class="n">kg</span></div>
-    
-    <span class="sd">&#39;&#39;&#39;这里设置优化器和lr_scheduler&#39;&#39;&#39;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;这里设置优化器和lr_scheduler&#39;&#39;&#39;</span>
 <div class="viewcode-block" id="SEGNNLitModel.configure_optimizers"><a class="viewcode-back" href="../../../neuralkg_ind.lit_model.html#neuralkg_ind.lit_model.SEGNNLitModel.SEGNNLitModel.configure_optimizers">[docs]</a>    <span class="k">def</span> <span class="nf">configure_optimizers</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">def</span> <span class="nf">lr_lambda</span><span class="p">(</span><span class="n">current_step</span><span class="p">):</span>
-            <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">            Compute a ratio according to current step,</span>
 <span class="sd">            by which the optimizer&#39;s lr will be mutiplied.</span>
 <span class="sd">            :param current_step:</span>

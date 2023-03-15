@@ -44,7 +44,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Package</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../../neuralkg_ind.html">neuralkg_ind package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../neuralkg_ind.html">NeuralKG-ind</a></li>
 </ul>
 
         </div>
@@ -80,7 +80,7 @@
 
 
 <div class="viewcode-block" id="RugE"><a class="viewcode-back" href="../../../../rulemodel.html#neuralkg_ind.model.RuleModel.RugE.RugE">[docs]</a><span class="k">class</span> <span class="nc">RugE</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;`Knowledge Graph Embedding with Iterative Guidance from Soft Rules`_ (RugE), which is a novel paradigm of KG embedding with iterative guidance from soft rules.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;`Knowledge Graph Embedding with Iterative Guidance from Soft Rules`_ (RugE), which is a novel paradigm of KG embedding with iterative guidance from soft rules.</span>
 
 <span class="sd">    Attributes:</span>
 <span class="sd">        args: Model configuration parameters.</span>
@@ -101,7 +101,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">init_emb</span><span class="p">()</span>
 
 <div class="viewcode-block" id="RugE.init_emb"><a class="viewcode-back" href="../../../../rulemodel.html#neuralkg_ind.model.RuleModel.RugE.RugE.init_emb">[docs]</a>    <span class="k">def</span> <span class="nf">init_emb</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Initialize the entity and relation embeddings in the form of a uniform distribution.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize the entity and relation embeddings in the form of a uniform distribution.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>       
         <span class="bp">self</span><span class="o">.</span><span class="n">epsilon</span> <span class="o">=</span> <span class="mf">2.0</span>
@@ -121,7 +121,7 @@
         
 
 <div class="viewcode-block" id="RugE.score_func"><a class="viewcode-back" href="../../../../rulemodel.html#neuralkg_ind.model.RuleModel.RugE.RugE.score_func">[docs]</a>    <span class="k">def</span> <span class="nf">score_func</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">head_emb</span><span class="p">,</span> <span class="n">relation_emb</span><span class="p">,</span> <span class="n">tail_emb</span><span class="p">,</span> <span class="n">mode</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Calculating the score of triples.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Calculating the score of triples.</span>
 <span class="sd">        </span>
 <span class="sd">        The formula for calculating the score is :math:`Re(&lt; wr, es, e¯o &gt;)`</span>
 
@@ -148,7 +148,7 @@
         
 
 <div class="viewcode-block" id="RugE.forward"><a class="viewcode-back" href="../../../../rulemodel.html#neuralkg_ind.model.RuleModel.RugE.RugE.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">triples</span><span class="p">,</span> <span class="n">negs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;single&#39;</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;The functions used in the training phase</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The functions used in the training phase</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            triples: The triples ids, as (h, r, t), shape:[batch_size, 3].</span>
@@ -164,7 +164,7 @@
         <span class="k">return</span> <span class="n">score</span></div>
 
 <div class="viewcode-block" id="RugE.get_score"><a class="viewcode-back" href="../../../../rulemodel.html#neuralkg_ind.model.RuleModel.RugE.RugE.get_score">[docs]</a>    <span class="k">def</span> <span class="nf">get_score</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">batch</span><span class="p">,</span> <span class="n">mode</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;The functions used in the testing phase</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The functions used in the testing phase</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            batch: A batch of data.</span>

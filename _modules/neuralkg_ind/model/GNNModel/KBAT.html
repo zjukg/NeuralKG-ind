@@ -44,7 +44,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Package</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../../neuralkg_ind.html">neuralkg_ind package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../neuralkg_ind.html">NeuralKG-ind</a></li>
 </ul>
 
         </div>
@@ -82,7 +82,7 @@
 
 <div class="viewcode-block" id="KBAT"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.KBAT.KBAT">[docs]</a><span class="k">class</span> <span class="nc">KBAT</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
 
-    <span class="sd">&quot;&quot;&quot;`Learning Attention-based Embeddings for Relation Prediction in Knowledge Graphs`_ (KBAT), </span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;`Learning Attention-based Embeddings for Relation Prediction in Knowledge Graphs`_ (KBAT), </span>
 <span class="sd">        which introduces the attention to aggregate the neighbor node representation.</span>
 
 <span class="sd">    Attributes:</span>
@@ -102,7 +102,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">init_ConvKB_emb</span><span class="p">()</span>
 
 <div class="viewcode-block" id="KBAT.init_GAT_emb"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.KBAT.KBAT.init_GAT_emb">[docs]</a>    <span class="k">def</span> <span class="nf">init_GAT_emb</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Initialize the GAT model and embeddings </span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize the GAT model and embeddings </span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            ent_emb_out: Entity embedding, shape:[num_ent, emb_dim].</span>
@@ -163,7 +163,7 @@
         <span class="n">nn</span><span class="o">.</span><span class="n">init</span><span class="o">.</span><span class="n">xavier_uniform_</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">W_entities</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">gain</span><span class="o">=</span><span class="mf">1.414</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="KBAT.init_ConvKB_emb"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.KBAT.KBAT.init_ConvKB_emb">[docs]</a>    <span class="k">def</span> <span class="nf">init_ConvKB_emb</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> 
-        <span class="sd">&quot;&quot;&quot;Initialize the ConvKB model.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize the ConvKB model.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            conv_layer: The convolution layer.</span>
@@ -180,7 +180,7 @@
         <span class="n">nn</span><span class="o">.</span><span class="n">init</span><span class="o">.</span><span class="n">xavier_uniform_</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">conv_layer</span><span class="o">.</span><span class="n">weight</span><span class="p">,</span> <span class="n">gain</span><span class="o">=</span><span class="mf">1.414</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="KBAT.forward"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.KBAT.KBAT.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">triples</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">adj_matrix</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">n_hop</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;The functions used in the training and testing phase</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The functions used in the training and testing phase</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            triples: The triples ids, as (h, r, t), shape:[batch_size, 3].</span>
@@ -199,7 +199,7 @@
         <span class="k">return</span> <span class="n">score</span></div>
 
 <div class="viewcode-block" id="KBAT.get_score"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.KBAT.KBAT.get_score">[docs]</a>    <span class="k">def</span> <span class="nf">get_score</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">batch</span><span class="p">,</span> <span class="n">mode</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;The functions used in the testing phase</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The functions used in the testing phase</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            batch: A batch of data.</span>
@@ -294,7 +294,7 @@
 
 <div class="viewcode-block" id="KBAT.cal_Con_score"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.KBAT.KBAT.cal_Con_score">[docs]</a>    <span class="k">def</span> <span class="nf">cal_Con_score</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">head_emb</span><span class="p">,</span> <span class="n">rela_emb</span><span class="p">,</span> <span class="n">tail_emb</span><span class="p">):</span>
 
-        <span class="sd">&quot;&quot;&quot;Calculating the score of triples with ConvKB model.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Calculating the score of triples with ConvKB model.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            head_emb: The head entity embedding.</span>
@@ -320,7 +320,7 @@
 
 <div class="viewcode-block" id="KBAT.cal_GAT_score"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.KBAT.KBAT.cal_GAT_score">[docs]</a>    <span class="k">def</span> <span class="nf">cal_GAT_score</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">head_emb</span><span class="p">,</span> <span class="n">relation_emb</span><span class="p">,</span> <span class="n">tail_emb</span><span class="p">):</span>
 
-        <span class="sd">&quot;&quot;&quot;Calculating the score of triples with TransE model.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Calculating the score of triples with TransE model.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            head_emb: The head entity embedding.</span>
@@ -336,7 +336,7 @@
         <span class="k">return</span> <span class="n">score</span></div></div>
 
 <div class="viewcode-block" id="SpecialSpmmFunctionFinal"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.KBAT.SpecialSpmmFunctionFinal">[docs]</a><span class="k">class</span> <span class="nc">SpecialSpmmFunctionFinal</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">autograd</span><span class="o">.</span><span class="n">Function</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Special function for only sparse region backpropataion layer, similar to https://arxiv.org/abs/1710.10903</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 <div class="viewcode-block" id="SpecialSpmmFunctionFinal.forward"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.KBAT.SpecialSpmmFunctionFinal.forward">[docs]</a>    <span class="nd">@staticmethod</span>
@@ -363,15 +363,15 @@
         <span class="k">return</span> <span class="kc">None</span><span class="p">,</span> <span class="n">grad_values</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span></div></div>
 
 <div class="viewcode-block" id="SpecialSpmmFinal"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.KBAT.SpecialSpmmFinal">[docs]</a><span class="k">class</span> <span class="nc">SpecialSpmmFinal</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Special spmm final layer, similar to https://arxiv.org/abs/1710.10903.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 <div class="viewcode-block" id="SpecialSpmmFinal.forward"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.KBAT.SpecialSpmmFinal.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edge</span><span class="p">,</span> <span class="n">edge_w</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">E</span><span class="p">,</span> <span class="n">out_features</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">SpecialSpmmFunctionFinal</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">edge</span><span class="p">,</span> <span class="n">edge_w</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">E</span><span class="p">,</span> <span class="n">out_features</span><span class="p">)</span></div></div>
 
 <div class="viewcode-block" id="GraphAttentionLayer"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.KBAT.GraphAttentionLayer">[docs]</a><span class="k">class</span> <span class="nc">GraphAttentionLayer</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
-    
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Sparse version GAT layer, similar to https://arxiv.org/abs/1710.10903.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 

@@ -44,7 +44,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Package</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../../neuralkg_ind.html">neuralkg_ind package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../neuralkg_ind.html">NeuralKG-ind</a></li>
 </ul>
 
         </div>
@@ -85,7 +85,7 @@
 <span class="kn">from</span> <span class="nn">neuralkg_ind.utils</span> <span class="kn">import</span> <span class="n">get_indtest_test_dataset_and_train_g</span><span class="p">,</span> <span class="n">get_g_bidir</span>
 
 <div class="viewcode-block" id="MorsE"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.MorsE.MorsE">[docs]</a><span class="k">class</span> <span class="nc">MorsE</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;`Meta-Knowledge Transfer for Inductive Knowledge Graph Embedding`_ (MorsE), which learns transferable meta-knowledge that</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;`Meta-Knowledge Transfer for Inductive Knowledge Graph Embedding`_ (MorsE), which learns transferable meta-knowledge that</span>
 <span class="sd">        can be used to produce entity embeddings.</span>
 
 <span class="sd">    Attributes:</span>
@@ -112,7 +112,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">kge_model</span> <span class="o">=</span> <span class="n">KGEModel</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
 
 <div class="viewcode-block" id="MorsE.forward"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.MorsE.MorsE.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sample</span><span class="p">,</span> <span class="n">ent_emb</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;single&#39;</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Calculating triple score.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Calculating triple score.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            sample: Sampled triplets.</span>
@@ -125,7 +125,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">kge_model</span><span class="p">(</span><span class="n">sample</span><span class="p">,</span> <span class="n">ent_emb</span><span class="p">,</span> <span class="n">mode</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="MorsE.get_intest_train_g"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.MorsE.MorsE.get_intest_train_g">[docs]</a>    <span class="k">def</span> <span class="nf">get_intest_train_g</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Getting inductive test-train graph.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Getting inductive test-train graph.</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            indtest_train_g: test-train graph.</span>
@@ -136,7 +136,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">indtest_train_g</span></div>
 
 <div class="viewcode-block" id="MorsE.get_ent_emb"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.MorsE.MorsE.get_ent_emb">[docs]</a>    <span class="k">def</span> <span class="nf">get_ent_emb</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sup_g_bidir</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Getting entities embedding.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Getting entities embedding.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            sup_g_bidir: Undirected supporting graph.</span>
@@ -150,7 +150,7 @@
         <span class="k">return</span> <span class="n">ent_emb</span></div>
     
 <div class="viewcode-block" id="MorsE.get_score"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.MorsE.MorsE.get_score">[docs]</a>    <span class="k">def</span> <span class="nf">get_score</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">batch</span><span class="p">,</span> <span class="n">mode</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Getting score of triplets.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Getting score of triplets.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            batch: Including positive sample, entities embedding, etc.</span>
@@ -172,7 +172,7 @@
                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">kge_model</span><span class="p">((</span><span class="n">pos_triple</span><span class="p">,</span> <span class="n">head_cand</span><span class="p">),</span> <span class="n">ent_emb</span><span class="p">,</span> <span class="n">mode</span><span class="p">)</span></div>
     
 <div class="viewcode-block" id="MorsE.get_num_rel"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.MorsE.MorsE.get_num_rel">[docs]</a>    <span class="k">def</span> <span class="nf">get_num_rel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">args</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Getting number of relation.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Getting number of relation.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            args: Model configuration parameters.</span>
@@ -186,7 +186,7 @@
         <span class="k">return</span> <span class="n">num_rel</span>   </div></div>
 
 <div class="viewcode-block" id="EntInit"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.MorsE.EntInit">[docs]</a><span class="k">class</span> <span class="nc">EntInit</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Class of initializing entities.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Class of initializing entities.</span>
 
 <span class="sd">    Attributes:</span>
 <span class="sd">        args: Model configuration parameters.</span>
@@ -204,7 +204,7 @@
         <span class="n">nn</span><span class="o">.</span><span class="n">init</span><span class="o">.</span><span class="n">xavier_normal_</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rel_tail_emb</span><span class="p">,</span> <span class="n">gain</span><span class="o">=</span><span class="n">nn</span><span class="o">.</span><span class="n">init</span><span class="o">.</span><span class="n">calculate_gain</span><span class="p">(</span><span class="s1">&#39;relu&#39;</span><span class="p">))</span>
 
 <div class="viewcode-block" id="EntInit.forward"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.MorsE.EntInit.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">g_bidir</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Initialize entities in graph.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize entities in graph.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            g_bidir: Undirected graph.</span>
@@ -223,7 +223,7 @@
         <span class="n">g_bidir</span><span class="o">.</span><span class="n">edata</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;ent_e&#39;</span><span class="p">)</span></div></div>
 
 <div class="viewcode-block" id="RelMorsGraphConv"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.MorsE.RelMorsGraphConv">[docs]</a><span class="k">class</span> <span class="nc">RelMorsGraphConv</span><span class="p">(</span><span class="n">RelGraphConv</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Basic layer of RGCN.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Basic layer of RGCN.</span>
 
 <span class="sd">    Attributes:</span>
 <span class="sd">        args: Model configuration parameters.</span>
@@ -268,7 +268,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">aggregator</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">aggregator</span>
 
 <div class="viewcode-block" id="RelMorsGraphConv.message"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.MorsE.RelMorsGraphConv.message">[docs]</a>    <span class="k">def</span> <span class="nf">message</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">edges</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Message function for propagating.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Message function for propagating.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            edges: Edges in graph.</span>
@@ -286,7 +286,7 @@
         <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;curr_emb&#39;</span><span class="p">:</span> <span class="n">curr_emb</span><span class="p">,</span> <span class="s1">&#39;msg&#39;</span><span class="p">:</span> <span class="n">msg</span><span class="p">,</span> <span class="s1">&#39;alpha&#39;</span><span class="p">:</span> <span class="n">a</span><span class="p">}</span></div>
 
 <div class="viewcode-block" id="RelMorsGraphConv.apply_node_func"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.MorsE.RelMorsGraphConv.apply_node_func">[docs]</a>    <span class="k">def</span> <span class="nf">apply_node_func</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nodes</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Function used for nodes.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Function used for nodes.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            nodes: nodes in graph.</span>
@@ -305,7 +305,7 @@
         <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;h&#39;</span><span class="p">:</span> <span class="n">node_repr</span><span class="p">}</span></div>
 
 <div class="viewcode-block" id="RelMorsGraphConv.forward"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.MorsE.RelMorsGraphConv.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">g</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Update node representation.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Update node representation.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            g: Subgraph of corresponding triple.</span>
@@ -328,7 +328,7 @@
             <span class="n">g</span><span class="o">.</span><span class="n">ndata</span><span class="p">[</span><span class="s1">&#39;repr&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">g</span><span class="o">.</span><span class="n">ndata</span><span class="p">[</span><span class="s1">&#39;repr&#39;</span><span class="p">],</span> <span class="n">g</span><span class="o">.</span><span class="n">ndata</span><span class="p">[</span><span class="s1">&#39;h&#39;</span><span class="p">]],</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span></div></div>
 
 <div class="viewcode-block" id="RGCN"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.MorsE.RGCN">[docs]</a><span class="k">class</span> <span class="nc">RGCN</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;RGCN model</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;RGCN model</span>
 
 <span class="sd">    Attributes:</span>
 <span class="sd">        args: Model configuration parameters.</span>
@@ -356,7 +356,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">jk_linear</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">emb_dim</span><span class="o">*</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">num_layers</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">emb_dim</span><span class="p">)</span>
 
 <div class="viewcode-block" id="RGCN.build_hidden_layer"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.MorsE.RGCN.build_hidden_layer">[docs]</a>    <span class="k">def</span> <span class="nf">build_hidden_layer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idx</span><span class="p">):</span> 
-        <span class="sd">&quot;&quot;&quot;build hidden layer of RGCN.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;build hidden layer of RGCN.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            idx: The idx of layer.</span>
@@ -369,7 +369,7 @@
                         <span class="n">activation</span><span class="o">=</span><span class="n">F</span><span class="o">.</span><span class="n">relu</span><span class="p">,</span> <span class="n">is_input_layer</span><span class="o">=</span><span class="n">input_flag</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="RGCN.forward"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.MorsE.RGCN.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">g</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Getting nodes embedding.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Getting nodes embedding.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            g: Subgraph of corresponding task.</span>
@@ -384,7 +384,7 @@
         <span class="k">return</span> <span class="n">g</span><span class="o">.</span><span class="n">ndata</span><span class="p">[</span><span class="s1">&#39;h&#39;</span><span class="p">]</span></div></div>
 
 <div class="viewcode-block" id="KGEModel"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.MorsE.KGEModel">[docs]</a><span class="k">class</span> <span class="nc">KGEModel</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;KGE model</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;KGE model</span>
 
 <span class="sd">    Attributes:</span>
 <span class="sd">        args: Model configuration parameters.</span>
@@ -418,7 +418,7 @@
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;model </span><span class="si">%s</span><span class="s1"> not supported&#39;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">model_name</span><span class="p">)</span>
 
 <div class="viewcode-block" id="KGEModel.forward"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.MorsE.KGEModel.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sample</span><span class="p">,</span> <span class="n">ent_emb</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;single&#39;</span><span class="p">):</span>
-        <span class="sd">&#39;&#39;&#39;Forward function that calculate the score of a batch of triples.</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;Forward function that calculate the score of a batch of triples.</span>
 <span class="sd">            In the &#39;single&#39; mode, sample is a batch of triple.</span>
 <span class="sd">            In the &#39;head-batch&#39; or &#39;tail-batch&#39; mode, sample consists two part.</span>
 <span class="sd">            The first part is usually the positive sample.</span>

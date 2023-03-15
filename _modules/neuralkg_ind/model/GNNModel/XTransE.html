@@ -44,7 +44,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Package</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../../neuralkg_ind.html">neuralkg_ind package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../neuralkg_ind.html">NeuralKG-ind</a></li>
 </ul>
 
         </div>
@@ -79,7 +79,7 @@
 
 <div class="viewcode-block" id="XTransE"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.XTransE.XTransE">[docs]</a><span class="k">class</span> <span class="nc">XTransE</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
 
-    <span class="sd">&quot;&quot;&quot;`Explainable Knowledge Graph Embedding for Link Prediction with Lifestyles in e-Commerce`_ (XTransE), which introduces the attention to aggregate the neighbor node representation.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;`Explainable Knowledge Graph Embedding for Link Prediction with Lifestyles in e-Commerce`_ (XTransE), which introduces the attention to aggregate the neighbor node representation.</span>
 
 <span class="sd">    Attributes:</span>
 <span class="sd">        args: Model configuration parameters.</span>
@@ -97,7 +97,7 @@
 
 <div class="viewcode-block" id="XTransE.init_emb"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.XTransE.XTransE.init_emb">[docs]</a>    <span class="k">def</span> <span class="nf">init_emb</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 
-        <span class="sd">&quot;&quot;&quot;Initialize the entity and relation embeddings in the form of a uniform distribution.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize the entity and relation embeddings in the form of a uniform distribution.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            margin: Caculate embedding_range and loss.</span>
@@ -121,7 +121,7 @@
 
 <div class="viewcode-block" id="XTransE.score_func"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.XTransE.XTransE.score_func">[docs]</a>    <span class="k">def</span> <span class="nf">score_func</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">triples</span><span class="p">,</span> <span class="n">neighbor</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">negs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;single&#39;</span><span class="p">):</span>
 
-        <span class="sd">&quot;&quot;&quot;Calculating the score of triples.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Calculating the score of triples.</span>
 <span class="sd">        </span>
 <span class="sd">        Args:</span>
 <span class="sd">            triples: The triples ids, as (h, r, t), shape:[batch_size, 3].</span>
@@ -164,8 +164,8 @@
         <span class="k">return</span> <span class="n">score</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="XTransE.transe_func"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.XTransE.XTransE.transe_func">[docs]</a>    <span class="k">def</span> <span class="nf">transe_func</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">head_emb</span><span class="p">,</span> <span class="n">rela_emb</span><span class="p">,</span> <span class="n">tail_emb</span><span class="p">):</span>
-        
-        <span class="sd">&quot;&quot;&quot;Calculating the score of triples with TransE model.</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Calculating the score of triples with TransE model.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            head_emb: The head entity embedding.</span>
@@ -182,7 +182,7 @@
 
 <div class="viewcode-block" id="XTransE.forward"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.XTransE.XTransE.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">triples</span><span class="p">,</span> <span class="n">neighbor</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">negs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;single&#39;</span><span class="p">):</span>
 
-        <span class="sd">&quot;&quot;&quot;The functions used in the training and testing phase</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The functions used in the training and testing phase</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            triples: The triples ids, as (h, r, t), shape:[batch_size, 3].</span>
@@ -202,7 +202,7 @@
         <span class="k">return</span> <span class="n">TransE_score</span> <span class="o">+</span> <span class="n">XTransE_score</span></div>
 
 <div class="viewcode-block" id="XTransE.get_score"><a class="viewcode-back" href="../../../../gnnmodel.html#neuralkg_ind.model.GNNModel.XTransE.XTransE.get_score">[docs]</a>    <span class="k">def</span> <span class="nf">get_score</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">batch</span><span class="p">,</span> <span class="n">mode</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;The functions used in the testing phase</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The functions used in the testing phase</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            batch: A batch of data.</span>

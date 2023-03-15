@@ -44,7 +44,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Package</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../../neuralkg_ind.html">neuralkg_ind package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../neuralkg_ind.html">NeuralKG-ind</a></li>
 </ul>
 
         </div>
@@ -81,7 +81,7 @@
 
 <div class="viewcode-block" id="ConvE"><a class="viewcode-back" href="../../../../kgemodel.html#neuralkg_ind.model.KGEModel.ConvE.ConvE">[docs]</a><span class="k">class</span> <span class="nc">ConvE</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
 
-    <span class="sd">&quot;&quot;&quot;`Convolutional 2D Knowledge Graph Embeddings`_ (ConvE), which use a 2D convolution network for embedding representation.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;`Convolutional 2D Knowledge Graph Embeddings`_ (ConvE), which use a 2D convolution network for embedding representation.</span>
 
 <span class="sd">    Attributes:</span>
 <span class="sd">        args: Model configuration parameters.</span>
@@ -99,7 +99,7 @@
 
 <div class="viewcode-block" id="ConvE.init_emb"><a class="viewcode-back" href="../../../../kgemodel.html#neuralkg_ind.model.KGEModel.ConvE.ConvE.init_emb">[docs]</a>    <span class="k">def</span> <span class="nf">init_emb</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">args</span><span class="p">):</span>
 
-        <span class="sd">&quot;&quot;&quot;Initialize the convolution layer and embeddings .</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize the convolution layer and embeddings .</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            conv1: The convolution layer.</span>
@@ -139,7 +139,7 @@
 
 <div class="viewcode-block" id="ConvE.score_func"><a class="viewcode-back" href="../../../../kgemodel.html#neuralkg_ind.model.KGEModel.ConvE.ConvE.score_func">[docs]</a>    <span class="k">def</span> <span class="nf">score_func</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">head_emb</span><span class="p">,</span> <span class="n">relation_emb</span><span class="p">,</span> <span class="n">concat</span> <span class="o">=</span> <span class="n">concat</span><span class="p">,</span> <span class="n">choose_emb</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
 
-        <span class="sd">&quot;&quot;&quot;Calculate the score of the triple embedding.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Calculate the score of the triple embedding.</span>
 
 <span class="sd">        This function calculate the score of the embedding.</span>
 <span class="sd">        First, the entity and relation embeddings are reshaped</span>
@@ -191,7 +191,7 @@
 
 <div class="viewcode-block" id="ConvE.forward"><a class="viewcode-back" href="../../../../kgemodel.html#neuralkg_ind.model.KGEModel.ConvE.ConvE.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">triples</span><span class="p">):</span>
 
-        <span class="sd">&quot;&quot;&quot;The functions used in the training phase</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The functions used in the training phase</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            triples: The triples ids, as (h, r, t), shape:[batch_size, 3].</span>
@@ -207,7 +207,7 @@
 
 <div class="viewcode-block" id="ConvE.get_score"><a class="viewcode-back" href="../../../../kgemodel.html#neuralkg_ind.model.KGEModel.ConvE.ConvE.get_score">[docs]</a>    <span class="k">def</span> <span class="nf">get_score</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">batch</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;tail_predict&quot;</span><span class="p">):</span>
 
-        <span class="sd">&quot;&quot;&quot;The functions used in the testing phase</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The functions used in the testing phase</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            batch: A batch of data.</span>
