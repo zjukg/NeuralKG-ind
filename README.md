@@ -52,7 +52,7 @@ NeuralKG-ind is a python-based library for inductive knowledge graph representat
 
 # 😃What's New
 ## May, 2023 
-* We have merge NeuralKG-ind to [NeuralKG Library](https://github.com/zjukg/NeuralKG) in the new [ind branch](https://github.com/zjukg/NeuralKG/tree/ind) and will maintain NeuralKG-ind in NeuralKG in the future.
+* We have merged NeuralKG-ind to [NeuralKG Library](https://github.com/zjukg/NeuralKG) in the new [ind branch](https://github.com/zjukg/NeuralKG/tree/ind) and will maintain NeuralKG-ind in NeuralKG in the future.
 ## Feb, 2023
 * We have released a paper **NeuralKG-ind: A Python Library for Inductive Knowledge Graph Representation Learning**
 
