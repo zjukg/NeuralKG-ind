@@ -20,8 +20,9 @@
     <p>用于归纳式知识图谱表示学习的Python工具包</p>
 </h1>
 <p align="center">
-    <b> <a href="https://github.com/zjukg/NeuralKG/blob/ind/README_CCKS.md"> CCKS2023 开放环境下知识图谱构建与补全评测任务二：归纳式知识图谱关系推理 运行说明</a></b>
+    <b> ❗️❗️❗️我们已经将NeuralKG-ind并入<a href="https://github.com/zjukg/NeuralKG/tree/ind">NeuralKG</a>项目，并将于5月底删除此此仓库，请关注者移步<a href="https://github.com/zjukg/NeuralKG/tree/ind">NeuralKG</a>❗️❗️❗️</b>
 </p>
+
 
 NeuralKG-ind是一个基于python的归纳知识图表示学习工具包，它包括**标准化过程**、**丰富的现有模型**、**解耦模块**和**综合评估指标**。我们为初学者提供了详细的[文档](https://zjukg.github.io/NeuralKG-ind/neuralkg_ind.model.html)。
 <br>
