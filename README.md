@@ -23,6 +23,9 @@
 <p align="center">
     <b> English | <a href="https://github.com/zjukg/NeuralKG-ind/blob/main/README_CN.md">中文</a> </b>
 </p>
+<p align="center">
+    <b>❗❗❗NeuralKG-ind has been merged into <a href=https://github.com/zjukg/NeuralKG> NeuralKG</a>. We will delete this repository at the end of May. </b>
+</p>
 
 NeuralKG-ind is a python-based library for inductive knowledge graph representation learning, which includes **standardized processes**, **rich existing methods**, **decoupled modules**, and **comprehensive evaluation metrics**. We provide [comprehensive documents](https://zjukg.github.io/NeuralKG-ind/neuralkg_ind.model.html) for beginners.
 
